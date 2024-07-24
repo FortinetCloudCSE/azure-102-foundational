@@ -1,11 +1,11 @@
 ---
 title: "Workshop Logistics"
-weight: 1
+weight: 5
 ---
 
 
-#### LaunchDemoForm
-{{< launchdemoform labdefinition="aws-fgt-101">}}
+
+{{< launchdemoform labdefinition="">}}
 
 {{< notice warning >}} 
 
@@ -15,6 +15,7 @@ After submitting, this page will return with a blank email address box and no ot
 
 {{< /notice >}}
 
+<!--
 ## Accessing QwikLabs & AWS environment
 
 
@@ -32,3 +33,4 @@ Provisioning the lab takes ~15 minutes once started.  This environment will run 
 **Once the environment has finished provisioning, check the QwikLabs Console left menu to find FortiGate NGFW & AWS console login URL and credentials .**
 
 ![](image-ql1.png)
+-->
