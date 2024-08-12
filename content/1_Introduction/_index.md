@@ -1,15 +1,12 @@
 ---
-title: "Introduction"
+title: "Chapter 1: Learning Objectives"
 weight: 5
 ---
 
-# FortiGate: Protecting Azure vNET Traffic Flows
 
-## Learning Objectives
-
-Upon completion of this workshop, you will gain understanding of the following objectives:
-  * Azure Services Overview
-  * Azure Network Concepts
+Upon completion of this workshop, you will gain understanding, create, and deploy the following:
+  * Azure Services
+  * Azure Virtual Network (VNET)
   * FortiGate-VM support for Azure
   * Create an Azure unsecured VNET
   * Deploy a FortiGate-VM to create an Azure secured VNET
@@ -34,9 +31,9 @@ Fortinet & Azure compute and components used during this workshop:
   * Azure networking offers multiple ways to organize your Azure architecture to take advantage of FortiGate traffic inspection.  Most importantly, traffic must follow a symmetrical routing path (for forward and reverse flows). As long as flows are symmetrical, the architecture will work and traffic will flow through a FortiGate NGFW for inspection.
 
   * We will deploy and configure the following two architectures:
-    - **Traffic flows in a single VNET without a FortiGate NVA - Unsecured VNET**
-    ![](Images/Azure-Unsecured-VNET.png)
+    - **Single VNET without a FortiGate NVA - Unsecured VNET**
+![](Images/Azure-Unsecured-VNET1.PNG)
 
 
-    - **Inspection of traffic flows in a single VNET with a FortiGate NVA - Secured VNET**
+    - **Single VNET with a FortiGate NVA - Secured VNET**
 ![](Images/Azure-Secured-VNET.PNG)
