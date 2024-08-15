@@ -30,7 +30,7 @@ You will be redirected to the **Create Route table** template.
 
 - 4. On the **Tags** tab, click **Next**.  Nothing to enter here.
 
-- 5. On the "Review + create** tab, confirm your entries under **Basics** and then select **create**.
+- 5. On the **Review + create** tab, confirm your entries under **Basics** and then select **create**.
 ![](../Images/4-2-Azure-deploy-rt-3.PNG)
 
 - 6. The screen should refresh and you will see **Deployment is in progress**.
@@ -75,4 +75,4 @@ From the **Routes** page, select **+ Add**.
 - 16. Return to the **Overview** page to see a summary of the **Routes** and associated **Subnets**.
 ![](../Images/4-2-Azure-deploy-rt-10.PNG)
 
-**Continue to Chapter Four - Task Three: Confirm Linux VMs access via FortiGate**
+**Continue to Chapter 5 - Task 3: Confirm Linux VMs access via FortiGate**

@@ -75,20 +75,35 @@ You will be redirected to the **Create Single VM** template.
 
 - 13.  Copy and paste the **Public IP address** into your local browser and you should be directed to the FortiGate NVA login page.  Don't forget to prefix the **Public IP address** with **https://**
 
-- 14. Enter the login info you created in **Step 3** above.  You will be presented with the **FortiGate Setup** page.  Click **Begin**.  On the **What's new in FortiOS 7.4** video, select **Don't show again** and **OK**.
+- 14. Enter the login info you created in **Step 3** above.  You will be presented with the **FortiGate Setup** page.  Click "**Begin**"
+![](../Images/4-1-Azure-deploy-fgt-22.PNG)  
+
+- 15. On the **Migrate Config with FortiConverter** page, click "**Later**"
+![](../Images/4-1-Azure-deploy-fgt-19.PNG)
+
+- 16. On the **Automatic Patch Upgrades for v7.4** page, click "**Save and continue**"
+![](../Images/4-1-Azure-deploy-fgt-20.PNG)
+
+- 17. On the **Disable Automatic Patch Upgrades** page, select "**I acknowledge**" and then "**OK**"
+![](../Images/4-1-Azure-deploy-fgt-21.PNG)
+
+- 18. On the **Dashboard Setup** page, select "**OK**"
+![](../Images/4-1-Azure-deploy-fgt-23.PNG)
+
+- 19. On the **What's new in FortiOS 7.4** video, select "**Don't show again**" and "**OK**".
 ![](../Images/4-1-Azure-deploy-fgt-15.PNG)
 
-- 15.  Look around and get familiar with the **Dashboard/Status** page.  Note items such as the **Virtual Machine** widget with the PAYGO license, **Firmware** version, and **WAN IP**.
+- 20.  Look around and get familiar with the **Dashboard/Status** page.  Note items such as the **Virtual Machine** widget with the PAYGO license, **Firmware** version, and **WAN IP**.
 ![](../Images/4-1-Azure-deploy-fgt-16.PNG)
 
-- 16. Navigate on the left to **Network** and **Interfaces**.  Note the **port1** and **port2** interfaces and assigned private IP address.  
+- 21. Navigate on the left to **Network** and **Interfaces**.  Note the **port1** and **port2** interfaces and assigned private IP address.  
 - **Why did they get assigned these subnets?**
 Note the private IP address for both **port1** and **port2**.  You will need this info for future tasks.
 ![](../Images/4-1-Azure-deploy-fgt-17.PNG)
 
-- 17. Feel free to continue looking around the FortiGate GUI and see if you notice screens that are differant compared to a hardware FortiGate GUI.
+- 22. Feel free to continue looking around the FortiGate GUI and see if you notice screens that are differant compared to a hardware FortiGate GUI.
 
-- 18. You have just deployed a **FortiGate NVA**.  The diagram below is a visual representation of your VNET with the Linux VMs and FortiGate NVA.
+- 23. You have just deployed a **FortiGate NVA**.  The diagram below is a visual representation of your VNET with the Linux VMs and FortiGate NVA.
 ![](../Images/4-1-Azure-deploy-fgt-18.PNG)
 
-**Continue to Chapter Four - Task Two: Deploy a Route Table and Create a UDR**
+**Continue to Chapter 5 - Task 2: Deploy a Route Table and Create a UDR**

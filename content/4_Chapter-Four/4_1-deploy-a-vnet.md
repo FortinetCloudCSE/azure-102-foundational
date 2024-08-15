@@ -1,5 +1,5 @@
 ---
-title: "Task 1 - Create an Azure Virtual Network (VNET)"
+title: "Task 1: Deploy an Azure Virtual Network (VNET)"
 weight: 1
 ---
 
@@ -55,7 +55,7 @@ Feel free to read through the available services that can be enabled.
 
 - 7. On the **Tags** tab, select **Next**.  Nothing to enter here.
 
-- 8. On the "Review + create** tab, confirm the template summary and select **create**.
+- 8. On the **Review + create** tab, confirm the template summary and select **create**.
 ![](../Images/Azure-creating-vnet-6.PNG)
 
 - 9. When the deployment is complete, you will get a **Your deployement is complete** notice.
@@ -69,7 +69,7 @@ Feel free to read through the available services that can be enabled.
 - 11. You have just created an **Azure virtual network (VNET)**.  The diagram below is a visual representation of your new VNET.
 ![](../Images/Azure-VNET-Basic.PNG)
 
-**Continue to **Task 2 - Create Linux Virtual Machines (VMs)**.**
+**Continue to **Chapter 4 - Task 2: Deploy Linux Virtual Machines (VMs)**.**
 
 
 

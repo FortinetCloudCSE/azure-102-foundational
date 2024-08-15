@@ -34,16 +34,16 @@ Why is HTTPS showing up on the scan results?
 
 - 2. From the **Linux-B-VM** CLI:
         - Confirm port 80 access to the Internet:  "**wget www.fortinet.com**"
-        - Confirm port 443 access to the Internet and the public IP assigned to **Linux-A-VM**: "**curl https://ipinfo.io/ip**"  (Confirm against what the Azure portal has listed  as the Public IP assigned to the FortiGate or confirm against the IP you used to login to the FortiGate GUI.)
+        - Confirm port 443 access to the Internet and the public IP assigned to **Linux-B-VM**: "**curl https://ipinfo.io/ip**"  (Confirm against what the Azure portal has listed  as the Public IP assigned to the FortiGate or confirm against the IP you used to login to the FortiGate GUI.)
         - Ping the private IP of **Linux-A-VM** and confirm replies.
         - From your local browser, open a tab and enter "**http://x.x.x.x**"  (x.x.x.x is the VIP of **Linux-B-VM**)  Confirm you get an NGINX welcome screen.
         
 Congrats if you confirmed access on all the requirements above on the first check.
 
 If time permits try enabling other ports on the Linux VMs and allowing access via the FortiGate.
-Also, spend some time looking around the FortiGate NVA and see if you notice a difference between what options are available compared to a FortiGate hardware GUI.
+Also, spend some time looking around the FortiGate NVA GUI and see if you notice differences between what options are available compared to the FortiGate hardware GUI.
 
-Thanks for attending this course!.
+Thanks for attending this course.
 
 **END OF COURSE**
 

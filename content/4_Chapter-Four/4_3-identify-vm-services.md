@@ -1,5 +1,5 @@
 ---
-title: "Task 3 - Identify VM Info and Unsecured Services"
+title: "Task 3: Identify VM Info and Unsecured Services"
 weight: 3
 ---
 
@@ -7,7 +7,7 @@ weight: 3
 
 
 
-Now that you have created the virtual machines, **Linux-A-VM** and **Linux-B-VM**, you are going to identify their assigned private and public IP (PIP) addresses, confirm which ports are open on each VM, and what access is available to and from their assigned subnets.
+Now that you have deployed both Linux virtual machines, **Linux-A-VM** and **Linux-B-VM**, you are going to identify their assigned private and public IP (PIP) addresses, confirm which ports are open on each VM, and what access is available to and from their assigned subnets.
 
 In the following steps 1-6, you will learn how to navigate and identify IP information for both VMs and login to each VM via the console.
 
@@ -57,7 +57,7 @@ With this information, we can implement company ABC's VNET security policies whe
                 - "**sudo apt update**"
                 - "**sudo apt upgrade**" and select "**Y**".
                 - Type "**clear**" after the updates have finished.
-        - Install the web service **NGINX**:  "**sudo install nginx**" and select "**Y**".
+        - Install the web service **NGINX**:  "**sudo apt install nginx**" and select "**Y**".
      - Checking access to **Linux-A-VM**:
         - Ping the private IP of **Linux-A-VM** and confirm replies.  (See step two above for IP)
         - Install **NMAP**:  "**sudo apt install nmap**" and select "**Y**"
@@ -77,7 +77,7 @@ With this information, we can implement company ABC's VNET security policies whe
                 - "**sudo apt upgrade**" and select "**Y**".
                 - Type "**clear**" after the updates have finished.
         - Ping the private IP of **Linux-B-VM** and confirm replies.  (See step five above for IP)
-        - Install **NMAP**:  "**sudo snap install nmap**"
+        - Install **NMAP**:  "**sudo apt install nmap**"
         - Scan open ports on **Linux-B-VM**:  "**nmap -F 192.168.1.xxx**"  (Note step five above for IP)
         Note the open port(s) on **Linux-B-VM**.
      - Confirm SSH access to **Linux-B-VM**:
@@ -94,4 +94,4 @@ What do steps seven and eight, above, tell you about access to/from the Internet
 
 What do steps seven and eight, above, tell you about access between each Linux VM in different subnets?  Does this match company ABC's VNET security policy?
 
-**Continue to Chapter 4: Securing the VNET**
+**Continue to Chapter Five: Securing the VNET**

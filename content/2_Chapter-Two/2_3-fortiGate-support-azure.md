@@ -1,5 +1,5 @@
 ---
-title: "FortiGate-VM Support for Azure"
+title: "Task 3: FortiGate-VM Support for Azure"
 weight: 3
 ---
 
@@ -19,12 +19,17 @@ FortiGate-VM also supports active/passive HA and active/active HA using Azure lo
 
 ### Instance Type Support
 FortiGate supports the following instance types on Azure:
-- Compute-optimized instance types
+- Compute optimized instance types
     - [**F Series**](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-compute)
 
 - General purpose instance types
     - [**D Series**](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-general)
 
+- Memory optimized instance types
+    - [**E Series**](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-memory)
+
 ### Models
 FortiGate-VM is available with different CPU and RAM sizes and you can deploy it on various private and public cloud platforms. The following table shows the models conventionally available to order, also known as bring your own license models.
 ![](../Images/Azure-FGT-Support-Models.PNG)
+
+**Continue to Chapter 3 - Getting Started**

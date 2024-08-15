@@ -87,7 +87,7 @@ enableEmoji = true
   #logoBannerText="Custom Logo Banner"
 
   # Optional: If you'd like additional logo sub text/descriptions, use logoBannerSubText Parameter.  leave empty string to omit: ""
-  logoBannerSubText="sample sub-banner text"
+  logoBannerSubText="15AUG24-R1"
 
 
   # Prefix URL to edit current page. Will display an "Edit this page" button on top right hand corner of every page. 
@@ -160,26 +160,21 @@ enableEmoji = true
   externalLinkTarget = "_blank"
 
 [[menu.shortcuts]] 
-name = "<i class='fas fa-graduation-cap'></i> Fortinet Cloud CSE GitHub Org"
-url = "https://github.com/FortinetCloudCSE"
+name = "<i class='fas fa-tools'></i> Azure Networking"
+url = "https://learn.microsoft.com/en-us/azure/networking/fundamentals/networking-overview"
+weight = 15
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-tools'></i>Fortinet - Public Cloud Solutions Hub"
+url = "https://docs.fortinet.com/cloud-solutions/azure"
 weight = 1
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-tools'></i>Fortinet Standard Workshop Guide"
-url = "https://fortinetcloudcse.github.io/UserRepo"
-weight = 11
+name = "<i class='fas fa-graduation-cap'></i>FortiGate VM on Microsoft Azure"
+url = "https://www.fortinet.com/content/dam/fortinet/assets/data-sheets/FortiGate_VM_Azure.pdf"
+weight = 5
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-tools'></i>Fortinet Standard Workshop Template Repo"
-url = "https://github.com/FortinetCloudCSE/UserRepo"
-weight = 21
-
-[[menu.shortcuts]]
-name = "<i class='fas fa-tools'></i> Hugo reLearn theme - Guide"
-url = "https://mcshelby.github.io/hugo-theme-relearn/index.html"
-weight = 35
-
-[[menu.shortcuts]]
-name = "<i class='fas fa-graduation-cap'></i> AWS Sample Workshop"
-url = "https://aws-samples.github.io/aws-modernization-workshop-sample/"
-weight = 50
+name = "<i class='fas fa-graduation-cap'></i>Fortinet Cloud Security for Azure"
+url = "https://www.fortinet.com/products/public-cloud-security/azure"
+weight = 10

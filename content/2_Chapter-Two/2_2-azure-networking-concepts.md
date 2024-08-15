@@ -1,5 +1,5 @@
 ---
-title: "Azure Networking Concepts"
+title: "Task 2: Azure Networking Concepts"
 weight: 2
 ---
 
@@ -34,3 +34,5 @@ Before diving into the reference architecture for this workshop, let's review so
 - **Subscription:** A virtual network is scoped to a subscription. You can implement multiple virtual networks within each Azure subscription and Azure region.
 
 In this workshop we will use these components to highlight insertion of FortiGate NGFW into an enterprise architecture. 
+
+**Continue to Chapter 2 - Task 3: FortiGate-VM Support for Azure**

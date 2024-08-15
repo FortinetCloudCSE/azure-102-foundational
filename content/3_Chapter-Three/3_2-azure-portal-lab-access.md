@@ -1,5 +1,5 @@
 ---
-title: "Azure Portal - Lab Access"
+title: "Task 2: Azure Portal: Lab Access"
 weight: 7
 ---
 
@@ -39,3 +39,5 @@ weight: 7
 
 - 10. Confrim your resource group is shown.
 ![](../Images/Azure-Portal-Verify.PNG)
+
+**Continue to Chapter 4:  Deploy a VNET**

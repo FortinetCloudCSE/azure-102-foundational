@@ -1,5 +1,5 @@
 ---
-title: "Task 2 - Create Linux Virtual Machines (VMs)"
+title: "Task 2: Deploy Linux Virtual Machines (VMs)"
 weight: 2
 ---
 
@@ -7,7 +7,7 @@ weight: 2
 
 
 
-Now that you have a **VNET** deployed, you are going to deploy two Linux VMs in your VNET, identify assigned public IP (PIP), confirm access to the Internet, and confirm access to between each VM.
+Now that you have a **VNET** deployed, you are going to deploy two Linux VMs in your VNET, identify assigned public IP (PIP), confirm access to the Internet, and confirm access between each VM.
 
 One VM, **Linux-A-VM**, will be assigned to the **Protected-A_Subnet**, and the second VM, **Linux-B-VM**, will be assigned to the **Protected-B_Subnet**.
 
@@ -93,7 +93,7 @@ Feel free to read through the available disk services that can be changed/enable
 ![](../Images/Azure-create-linux-vm-12.PNG)
 
 
-**Continue to **Task 3 - Identify VM info and Unsecured Services**
+**Continue to **Chapter 4 - Task 3: Identify VM info and Unsecured Services**
 
 
 

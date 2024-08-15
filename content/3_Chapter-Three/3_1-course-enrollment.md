@@ -1,19 +1,33 @@
 ---
-title: "Workshop Logistics"
+title: "Task 1: Course Enrollment"
 weight: 5
 ---
 
 
 
-{{< launchdemoform labdefinition="">}}
+## Public Cloud - 102 - Azure Foundational
+ 
+### Enroll in this workshop
+ 
+{{% notice info %}}
+ 
+### Customer/Partner Name  and Event Code
+ 
+* If you are using this workshop for a __Customer/Partner__ - enter their name
+* If you are a __Customer/Partner__ - enter your __Customer/Partner__ name
+* If this is an instructor led event please enter the provided __Event Code__
+ 
+{{% /notice %}}
+ 
+{{< launchdemoform labdefinition="azure-102-xperts" >}}
+ 
+{{% notice style="secondary" icon="eye" title="PLEASE DO NOT SUBMIT MULTIPLE TIMES"  %}} After submitting, this page will return with a blank email address box and no other indications.
+ 
 
-{{< notice warning >}} 
+{{% /notice %}}
+ 
+**Continue to Chapter 3 - Task 2: Azure Portal - Lab Access**
 
-After submitting, this page will return with a blank email address box and no other indications.
-
-\*\*\* __PLEASE DO NOT SUBMIT MULTIPLE TIMES__ \*\*\*  
-
-{{< /notice >}}
 
 <!--
 ## Accessing QwikLabs & AWS environment
