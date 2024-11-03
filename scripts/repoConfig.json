@@ -1,30 +1,54 @@
 {
-  "repoName":"azure-102-foundational",
-  "author":"Brent Martinez",
-  "workshopTitle":"Azure 102 Foundational Workshop",
-  "themeVariant":"Xperts2024",
-  "logoBannerText":"Azure 102",
-  "logoBannerSubText":"Foundational FortiGate",
-  "errorLevel":"warning",
-  "googleServicesID":"G-5RZBH288ST",
+  "repoName": "azure-102-foundational",
+  "author": "Brent Martinez",
+  "workshopTitle": "Azure 102 Foundational Workshop",
+  "themeVariant": "Xperts2024",
+  "logoBannerText": "Azure 102",
+  "logoBannerSubText": "Foundational FortiGate",
+  "errorLevel": "warning",
+  "googleServicesID": "G-5RZBH288ST",
   "shortcuts": [
-  {
-    "text": "Azure Networking",
-    "URL": "https://learn.microsoft.com/en-us/azure/networking/fundamentals/networking-overview",
-    "icon": "fa-lightbulb",
-    "weight":10
-  },
-  {
-    "text": "Fortinet - Public Cloud Solutions Hub",
-    "URL": "https://docs.fortinet.com/cloud-solutions/azure",
-    "icon": "fa-tools",
-    "weight":20
-  },
-  {
-    "text": "FortiGate VM on Microsoft Azure",
-    "URL": "https://www.fortinet.com/content/dam/fortinet/assets/data-sheets/FortiGate_VM_Azure.pdf",
-    "icon": "fa-tools",
-    "weight":30
-  }
+    {
+      "text": "Xperts Presentation",
+      "URL": "Xperts-2024-AZURE-102.pdf",
+      "icon": "fa-lightbulb",
+      "weight": 10
+    },
+    {
+      "text": "Fortinet's Azure Microsite",
+      "URL": "https://fortinet.com/azure",
+      "icon": "fa-lightbulb",
+      "weight": 20
+    },
+    {
+      "text": "Fortinet & Azure Solutions",
+      "URL": "https://docs.fortinet.com/cloud-solutions/azure",
+      "icon": "fa-lightbulb",
+      "weight": 30
+    },
+    {
+      "text": "Fortinet in Azure MarketPlace",
+      "URL": "https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=fortinet",
+      "icon": "fa-tools",
+      "weight": 40
+    },
+    {
+      "text": "Azure Networking",
+      "URL": "https://learn.microsoft.com/en-us/azure/networking/fundamentals/networking-overview",
+      "icon": "fa-lightbulb",
+      "weight": 50
+    },
+    {
+      "text": "FortiGate VM on Microsoft Azure",
+      "URL": "https://www.fortinet.com/content/dam/fortinet/assets/data-sheets/FortiGate_VM_Azure.pdf",
+      "icon": "fa-tools",
+      "weight": 60
+    },
+    {
+      "text": "Fortinet Cloud CSE GitHub Org",
+      "URL": "https://github.com/FortinetCloudCSE/azure-202-advanced",
+      "icon": "fa-graduation-cap",
+      "weight": 70
+    }
   ]
 }
