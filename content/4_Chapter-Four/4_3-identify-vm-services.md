@@ -44,7 +44,7 @@ You will be redirected to the **Linux-B-VM | Serial Console** screen.
 
 - **Linux-B-VM** is the www server.  Only HTTP services from the Internet should be allowed.  It will also have HTTP and HTTPS access to the Internet and only PING access to **Linux-A-VM**.
 
-The goals of the following steps seven and eight, are to note what service ports are open and listening on each VM, what access does each VM have accross subnets, and what services to and from the Internet each VM has exposed and access to.  
+The goals of the following steps seven and eight, are to note what service ports are open and listening on each VM, what access does each VM have across subnets, and what services to and from the Internet each VM has exposed and access to.  
 With this information, we can implement company ABC's VNET security policies when securing the VNET in **Chapter Five: Securing the VNET**.  
 
 
