@@ -21,7 +21,7 @@ To meet these requirements, the following access needs to be setup for each Linu
 - PING access to **Linux-A-VM**
 
 
-In the following steps, you will create an address object, a VIP, and a Firewall Policy for **Linux-A-VM** and then repeat east step to create similar configurations for **Linux-B-VM**.
+In the following steps, you will create an address object, a VIP, and a Firewall Policy for **Linux-A-VM** and then repeat each step to create similar configurations for **Linux-B-VM**.
 
 - 1. From the FotiGate GUI, navigate to **Policy & Objects**, **Addresses**, and click "**+ Create new**".  
 ![](../Images/4-4-Azure-fgt-policy-1.PNG)
