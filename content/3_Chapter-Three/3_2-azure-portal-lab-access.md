@@ -20,9 +20,10 @@ weight: 7
 1. Use the credentials shared with you by your instructors.
 
     - **Username**:  "**<studentxx@fortinetcloud.onmicrosoft.com>**"
-    - **Password**:  "**FortinetAzure2024!**"
+1. Enter Temporary access credentials
+   - ![](Azure-AccessPass.png)
 
-1. Click **Log in**.
+1. Click **Sign in**.
 1. Click **No** on the 'Stay signed in?' prompt
 1. Click **Get started** on the 'Welcome to Microsoft Azure' page.
 1. Click **Skip** on the 'How do you plan to use Azure' page.
