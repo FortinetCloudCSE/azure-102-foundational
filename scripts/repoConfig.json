@@ -2,7 +2,7 @@
   "repoName": "azure-102-foundational",
   "author": "Brent Martinez",
   "workshopTitle": "Azure 102 Foundational Workshop",
-  "themeVariant": "Xperts2024",
+  "themeVariant": "Workshop",
   "logoBannerText": "Azure 102",
   "logoBannerSubText": "Foundational FortiGate",
   "errorLevel": "warning",
