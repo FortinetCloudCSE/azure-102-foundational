@@ -7,7 +7,6 @@ In this chapter, you will enter your information to confirm course attendance an
 
 ## Overview
 
-- Course Enrollment
 - Azure Portal - Lab Access
 
-**Continue to Chapter 3 - Task 1: Course Enrollment**
+**Continue to Chapter 3 - Task 1: Azure Portal Access**

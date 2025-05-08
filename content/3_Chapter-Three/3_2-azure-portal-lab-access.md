@@ -1,5 +1,5 @@
 ---
-title: "Task 2: Azure Portal: Lab Access"
+title: "Task 1: Azure Portal Lab Access"
 weight: 7
 ---
 
