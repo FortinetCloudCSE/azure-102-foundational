@@ -9,8 +9,8 @@
   "googleServicesID": "G-5RZBH288ST",
   "shortcuts": [
     {
-      "text": "Xperts Presentation",
-      "URL": "Xperts-2024-AZURE-102.pdf",
+      "text": "Azure 102 Presentation",
+      "URL": "PublicCloud102-Azure Foundational.pdf",
       "icon": "fa-lightbulb",
       "weight": 10
     },
