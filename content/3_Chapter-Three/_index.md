@@ -7,6 +7,7 @@ In this chapter, you will enter your information to confirm course attendance an
 
 ## Overview
 
+- Azure Environment Provision - If required.
 - Azure Portal - Lab Access
 
-**Continue to Chapter 3 - Task 1: Azure Portal Access**
+**Continue to Chapter 3 - Azure Environment Provision**

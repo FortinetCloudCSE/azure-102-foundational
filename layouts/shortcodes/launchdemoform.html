@@ -1,0 +1,39 @@
+<script>
+  function formSubmit() {
+
+    var labdefinition = "{{ .Get `labdefinition` }}";
+
+    var useremail = document.getElementById("useremail").value;
+
+    var postdata =
+      "customer=1234&smartticket=5678&useremail=" + useremail + "&userop=Create&odlconfigname=" + labdefinition;
+
+    var xhr = new XMLHttpRequest();
+    xhr.open(
+      "POST",
+      "https://f1dcf3d2-d4e7-45f4-ac93-5394986d1fb4.webhook.eus.azure-automation.net/webhooks?token=6P53UsBtue8SV1dzMVHc27oVmNgMxDIQJX42fUYwazE%3d",
+      false
+    );
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        var json = eval("(" + this.responseText +")");
+        alert("Success. Result:" + json);
+      }
+    };
+    xhr.onload = function () {
+      console.log(this.responseText);
+    };
+
+    xhr.send(postdata);
+
+    document.getElementById("useremail").getElementsByTagName("input")[0].value = 'Provisioning Started.';
+    return false;
+  }
+</script>
+
+<form id="provision-lab" onsubmit="return formSubmit();">
+  <label for="useremail">Please enter your email address (required for Workshop Provisioning)</label>
+  <input type="email" required id="useremail" name="useremail" value="" />
+  <input type="submit" value="Provision" />
+</form>
