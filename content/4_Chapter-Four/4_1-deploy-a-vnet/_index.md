@@ -7,7 +7,7 @@ In Task 1, you will deploy VNET (Virtual Network) in the training **Resource Gro
 
 1. Navigate into your Resource Group and click on the **+ Create** located at the top left of the tool bar.
 
-    ![Azure-creating-vnet](../Images/Azure-creating-vnet.PNG)  
+    {{< figure src="Azure-creating-vnet.PNG" alt="Azure-creating-vnet" >}}
 
     You will be redirected to the Azure Marketplace.
 
@@ -17,7 +17,7 @@ In Task 1, you will deploy VNET (Virtual Network) in the training **Resource Gro
     - Navigate to the **Virtual Network** offering from Microsoft
     - Select **Create** and **Virtual network**.
 
-    ![Azure-creating-vnet-1](../Images/Azure-creating-vnet-1.PNG)
+    {{< figure src="Azure-creating-vnet-1.PNG" alt="Azure-creating-vnet-1" >}}
 
     You will be redirected to the **Create virtual network** template.
 
@@ -30,7 +30,7 @@ In Task 1, you will deploy VNET (Virtual Network) in the training **Resource Gro
 
     - Click **Next**.
 
-    ![Azure-creating-vnet-2](../Images/Azure-creating-vnet-2.PNG)
+    {{< figure src="Azure-creating-vnet-2.PNG" alt="Azure-creating-vnet-2" >}}
 
 1. On the **Security** tab, make sure **none** of the services are selected and click **Next**.
 Feel free to read through the available services that can be enabled.
@@ -45,11 +45,11 @@ Feel free to read through the available services that can be enabled.
 
     - Select **Save**
 
-        ![Azure-creating-vnet-3](../Images/Azure-creating-vnet-3.PNG)
+        {{< figure src="Azure-creating-vnet-3.PNG" alt="Azure-creating-vnet-3" >}}
 
     - Select **+ Add a subnet** (see red below), and add the following info:
 
-        ![Azure-creating-vnet-4](../Images/Azure-creating-vnet-4.PNG)
+        {{< figure src="Azure-creating-vnet-4.PNG" alt="Azure-creating-vnet-4" >}}
 
 1. Continue to **+ Add a subnet**
 
@@ -60,7 +60,7 @@ Feel free to read through the available services that can be enabled.
 
     - Click **Next**.
 
-    ![Azure-creating-vnet-5](../Images/Azure-creating-vnet-5.PNG)
+    {{< figure src="Azure-creating-vnet-5.PNG" alt="Azure-creating-vnet-5" >}}
 
 1. On the **Tags** tab, click **Next**.
 
@@ -68,20 +68,20 @@ Feel free to read through the available services that can be enabled.
 
     - confirm the template summary and select **create**.
 
-    ![Azure-creating-vnet-6](../Images/Azure-creating-vnet-6.PNG)
+    {{< figure src="Azure-creating-vnet-6.PNG" alt="Azure-creating-vnet-6" >}}
 
 1. When the deployment is complete, you will get a **Your deployment is complete** notice.
 
     - Confirm your deployment has completed and under **Resource group** select the "**studentxx-azure102-rg**" link.  See red section below.
 
-    ![Azure-creating-vnet-7](../Images/Azure-creating-vnet-7.PNG)
+    {{< figure src="Azure-creating-vnet-7.PNG" alt="Azure-creating-vnet-7" >}}
 
 1. Your screen should return you to your respective resource group with the new virtual network listed.  Feel free to click on the new virtual network and look around.
 
-    ![Azure-creating-vnet-8](../Images/Azure-creating-vnet-8.PNG)
+    {{< figure src="Azure-creating-vnet-8.PNG" alt="Azure-creating-vnet-8" >}}
 
 1. You have just created an **Azure virtual network (VNET)**.  The diagram below is a visual representation of your new VNET.
 
-    ![Azure-VNET-Basic](../Images/Azure-VNET-Basic.PNG)
+    {{< figure src="Azure-VNET-Basic.PNG" alt="Azure-VNET-Basic" >}}
 
 **Continue to Chapter 4 - Task 2: Deploy Linux Virtual Machines (VMs).**

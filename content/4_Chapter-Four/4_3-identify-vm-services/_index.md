@@ -9,9 +9,9 @@ In the following steps 1-6, you will learn how to navigate and identify IP infor
 
  **Useful Hint: Access the serial console of both virtual machines in different tabs to help simply navigation.**
 
-1. Navigate into your Resource Group and right click on the virtual machine **Linux-A-VM**.  Select **Open Link in New Tab** 
+1. Navigate into your Resource Group and right click on the virtual machine **Linux-A-VM**.  Select **Open Link in New Tab**
 
-    ![Azure-identify-pip-access](../Images/Azure-identify-pip-access.PNG)  
+    {{< figure src="Azure-identify-pip-access.PNG" alt="Azure-identify-pip-access" >}}
 
     You will see the **Linux-A-VM** Overview page in a new tab.
 
@@ -19,13 +19,13 @@ In the following steps 1-6, you will learn how to navigate and identify IP infor
 
     - Navigate to the bottom left of the screen, expand the **Help** menu, and select **Serial console**.
 
-      ![Azure-identify-pip-access1](../Images/Azure-identify-pip-access1.PNG)
+    {{< figure src="Azure-identify-pip-access1.PNG" alt="Azure-identify-pip-access1" >}}
 
     You will be redirected to the **Linux-A-VM | Serial Console** screen.
 
 1. Login to the **Linux-A-VM** console using the credentials you used when creating the **Linux-A-VM**.
 
-    ![Azure-identify-pip-access2](../Images/Azure-identify-pip-access2.PNG)
+    {{< figure src="Azure-identify-pip-access2.PNG" alt="Azure-identify-pip-access2" >}}
 
 1. Return to the **studentxx-azure102-rg** tab and right click on the virtual machine **Linux-B-VM**.  Select **Open Link in New Tab**  
 
@@ -39,7 +39,7 @@ In the following steps 1-6, you will learn how to navigate and identify IP infor
 
 1. Login to the **Linux-B-VM** console using the credentials you used when creating **Linux-B-VM**.
 
-    <ins>The VNET security policy for company ABC is as follows:</ins>
+    **The VNET security policy for company ABC is as follows:**
 
     - **Linux-A-VM** will be the management server. Per company ABC security policy, it should only have SSH and PING access to **Linux-B-VM** and HTTP/HTTPS access to the Internet. There should also be SSH access to **Linux-A-VM** from the Internet.
 
@@ -52,9 +52,9 @@ In the following steps 1-6, you will learn how to navigate and identify IP infor
     **Make sure to configure **Linux-B-VM** first - Step seven**
 1. From the **Linux-B-VM** CLI:
 
-    - a. Ping www.yahoo.com and confirm DNS and ICMP access to the internet:  "**ping www.yahoo.com**" (CTRL+c to stop ping)
-    - Confirm port 80 access to the Internet:  "**wget www.fortinet.com**".  (Confirm "200 OK" response)
-    - Confirm port 443 access to the Internet and the public IP assigned to **Linux-B-VM**: "**curl https://ipinfo.io/ip**".  (Confirm against what the Azure portal listed in step five above)
+    - a. Ping `**www.yahoo.com**` and confirm DNS and ICMP access to the internet:  `**ping www.yahoo.com**` (CTRL+c to stop ping)
+    - Confirm port 80 access to the Internet:  `**wget www.fortinet.com**`.  (Confirm "200 OK" response)
+    - Confirm port 443 access to the Internet and the public IP assigned to **Linux-B-VM**: `**curl https://ipinfo.io/ip**`.  (Confirm against what the Azure portal listed in step five above)
     - Check for Ubuntu updates and install them:  
         - "**sudo apt update**"
         - "**sudo apt upgrade**" and select "**Y**".
@@ -66,14 +66,14 @@ In the following steps 1-6, you will learn how to navigate and identify IP infor
     - Scan open ports on **Linux-A-VM**:  "**nmap -F 192.168.1.xxx**"  (See step two above for IP)
     Note the open port(s) on **Linux-A-VM**
     - Confirm SSH access to **Linux-A-VM**:
-        - Login via SSH:  **ssh studentxx@192.168.1.xxx**"
+        - Login via SSH:  `**ssh studentxx@192.168.1.xxx**`
         - Run "**sudo ss -ltn**" to confirm the same open ports that NMAP reported
         - Type **exit** to disconnect from **Linux-A-VM**
 
 1. From the **Linux-A-VM** CLI:
-    - Ping "**www.yahoo.com**" and confirm replies.  (CTRL+c to stop ping)
-    - Confirm port 80 access to the Internet:  "**wget www.fortinet.com**"
-    - Confirm port 443 access to the Internet and the public IP assigned to **Linux-A-VM**: "**curl https://ipinfo.io/ip**"  (Confirm against what the Azure portal listed in step two above)
+    - Ping `**www.yahoo.com**` and confirm replies.  (CTRL+c to stop ping)
+    - Confirm port 80 access to the Internet:  `**wget www.fortinet.com**`
+    - Confirm port 443 access to the Internet and the public IP assigned to **Linux-A-VM**: `**curl https://ipinfo.io/ip**`  (Confirm against what the Azure portal listed in step two above)
     - Check for Ubuntu updates and install them:  
         - "**sudo apt update**"
         - "**sudo apt upgrade**" and select "**Y**".
@@ -83,13 +83,13 @@ In the following steps 1-6, you will learn how to navigate and identify IP infor
     - Scan open ports on **Linux-B-VM**:  "**nmap -F 192.168.1.xxx**"  (Note step five above for IP)
     Note the open port(s) on **Linux-B-VM**.
     - Confirm SSH access to **Linux-B-VM**:
-        - Login via SSH:  **ssh studentxx@192.168.1.xxx**"
+        - Login via SSH:  `**ssh studentxx@192.168.1.xxx**`
         - Run "**sudo ss -ltn**" to confirm the same open ports that NMAP reported.
         - Type **exit** to disconnect from **Linux-B-VM**.
 
 The following diagram is a visual representation of your current VNET and VM deployment.
 
-![Azure-Unsecured-VNET1](../Images/Azure-Unsecured-VNET1.PNG)
+{{< figure src="Azure-Unsecured-VNET1.PNG" alt="Azure-Unsecured-VNET1" >}}
 
 What do steps seven and eight, above, tell you about access to/from the Internet to both Linux VMs?  Does this match company ABC's VNET security policy?
 

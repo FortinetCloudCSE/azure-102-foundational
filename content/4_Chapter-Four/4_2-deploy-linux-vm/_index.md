@@ -17,13 +17,13 @@ VM - **Linux-B-VM** will be assigned to the **Protected-B_Subnet**
 
 1. Navigate into your Resource Group and click on the **+ Create** located at the top left of the tool bar.
 
-    ![Azure-creating-vnet](../Images/Azure-creating-vnet.PNG)  
+    {{< figure src="Azure-creating-vnet.PNG" alt="Azure-creating-vnet" >}}
 
     You will be redirected to the Azure Marketplace.
 
 1. In the Marketplace search bar, enter **ubuntu 24.04 lts** and then enter.  Navigate to the **Ubuntu 24.04 LTS - all plans including Ubuntu Pro** offering from **Canonical** and select **Create** and **Ubuntu Server 24.04 LTS**.
 
-    ![Azure-creating-vnet](../Images/Azure-create-linux-vm.PNG)
+    {{< figure src="Azure-create-linux-vm.PNG" alt="Azure-create-linux-vm" >}}
 
     You will be redirected to the **Create a virtual machine** template.
 
@@ -36,11 +36,11 @@ VM - **Linux-B-VM** will be assigned to the **Protected-B_Subnet**
         - Security type:  "**Standard**"
         - Size:  Select "**See all sizes**"
 
-    ![Azure-create-linux-vm-8](../Images/Azure-create-linux-vm-8.PNG)
+    {{< figure src="Azure-create-linux-vm-8.PNG" alt="Azure-create-linux-vm-8" >}}
 
      - On the **Select a VM size** screen, expand the **D-Series v5** section and select "**D2as_v5**" and then click **Select**
 
-    ![Azure-create-linux-vm-9](../Images/Azure-create-linux-vm-9.PNG)
+    {{< figure src="Azure-create-linux-vm-9.PNG" alt="Azure-create-linux-vm-9" >}}
 
     - Continuing from the **Create a virtual machine** screen:
 
@@ -51,11 +51,11 @@ VM - **Linux-B-VM** will be assigned to the **Protected-B_Subnet**
 
 1. Confirm the changes and the other fields default entries match the following diagram.
 
-    ![Azure-create-linux-vm-1](../Images/Azure-create-linux-vm-1.PNG)
+    {{< figure src="Azure-create-linux-vm-1.PNG" alt="Azure-create-linux-vm-1" >}}
 
-    ![Azure-create-linux-vm-2](../Images/Azure-create-linux-vm-2.PNG)
+    {{< figure src="Azure-create-linux-vm-2.PNG" alt="Azure-create-linux-vm-2" >}}
 
-    ![Azure-create-linux-vm-3](../Images/Azure-create-linux-vm-3.PNG)
+    {{< figure src="Azure-create-linux-vm-3.PNG" alt="Azure-create-linux-vm-3" >}}
 
 1. Select **Next: Disks >**.
 
@@ -76,8 +76,9 @@ Feel free to read through the available disk services that can be changed/enable
 
 1. Confirm the changes and the other fields default entries match the following diagram.
 
-    ![Azure-create-linux-vm-4](../Images/Azure-create-linux-vm-4.PNG)
-    ![Azure-create-linux-vm-5](../Images/Azure-create-linux-vm-5.PNG)
+    {{< figure src="Azure-create-linux-vm-4.PNG" alt="Azure-create-linux-vm-4" >}}
+
+    {{< figure src="Azure-create-linux-vm-5.PNG" alt="Azure-create-linux-vm-5" >}}
 
 1. Select **Review + create >**.
 
@@ -85,19 +86,19 @@ Feel free to read through the available disk services that can be changed/enable
 
 1. Confirm the template validation has passed and select **Create**
 
-    ![Azure-create-linux-vm-6](../Images/Azure-create-linux-vm-6.PNG)
+    {{< figure src="Azure-create-linux-vm-6.PNG" alt="Azure-create-linux-vm-6" >}}
 
 1. The **Deployment is in progress** notice is displayed.
 
-    ![Azure-create-linux-vm-7](../Images/Azure-create-linux-vm-7.PNG)
+    {{< figure src="Azure-create-linux-vm-7.PNG" alt="Azure-create-linux-vm-7" >}}
 
 1. Once the **Your deployment is complete** notice is displayed, click on the **student11-azure102-rg** link to be re-directed to your resource group.
 
-    ![Azure-create-linux-vm-10](../Images/Azure-create-linux-vm-10.PNG)
+    {{< figure src="Azure-create-linux-vm-10.PNG" alt="Azure-create-linux-vm-10" >}}
 
 1. Verify the new **Linux-A-VM** and the associated components are listed.
 
-    ![Azure-create-linux-vm-11](../Images/Azure-create-linux-vm-11.PNG)
+    {{< figure src="Azure-create-linux-vm-11.PNG" alt="Azure-create-linux-vm-11" >}}
 
 #### Steps to create Linux-B-VM
 
@@ -110,6 +111,6 @@ Feel free to read through the available disk services that can be changed/enable
 
 1. Verify the new **Linux-B-VM** and the associated components are listed.
 
-    ![Azure-create-linux-vm-12](../Images/Azure-create-linux-vm-12.PNG)
+    {{< figure src="Azure-create-linux-vm-12.PNG" alt="Azure-create-linux-vm-12" >}}
 
 **Continue to Chapter 4 - Task 3: Identify VM info and Unsecured Services**

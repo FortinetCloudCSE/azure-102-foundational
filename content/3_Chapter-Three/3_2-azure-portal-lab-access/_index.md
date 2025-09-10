@@ -5,23 +5,25 @@ weight: 7
 
 ### Lab Environment
 
-- This lab is configured to allow each student to have their own training lab environment using pre-created Azure resource groups all in one shared Azure Subscription.
+This lab is configured to allow each student to have their own training lab environment using pre-created Azure resource groups all in one shared Azure Subscription.
 
 ### Azure Portal Lab Access
 
-- First, you must log in to the Azure Portal. Then, you will gain access to the lab environment.
+First log in to the Azure Portal, next access to the lab environment.
 
 ### To access the Azure Portal sign-in page
 
 1. Open a browser and access the following URL:
 
-    - <https://portal.azure.com>
+    <https://portal.azure.com>
 
 1. Use the credentials shared with you by your instructors.
 
-    - **Username**:  "**<studentxx@fortinetcloud.onmicrosoft.com>**"
+    **Username**:  "**<userXX@fortinetcloud.onmicrosoft.com>**"
+
 1. Enter Temporary access credentials
-   - ![](Azure-AccessPass.png)
+
+    {{< figure src="Azure-AccessPass.png" alt="Azure-AccessPass" >}}
 
 1. Click **Sign in**.
 1. Click **No** on the 'Stay signed in?' prompt
@@ -30,14 +32,14 @@ weight: 7
 1. Click **Skip** on the 'Now, let show you around Azure' page.
 1. Click on the **Home** link in the upper left corner.
 
-    ![Azure-Home](../Images/Azure-Home.PNG)
+    {{< figure src="Azure-Home.PNG" alt="Azure-Home" >}}
 
 1. Click on **Resource Groups** in the main page.
 
-    ![Azure-Portal-RG](../Images/Azure-Portal-RG.PNG)
+    {{< figure src="Azure-Portal-RG.PNG" alt="Azure-Portal-RG" >}}
 
 1. Confirm your resource group is shown.
 
-    ![Azure-Portal-Verify](../Images/Azure-Portal-Verify.PNG)
+    {{< figure src="Azure-Portal-Verify.PNG" alt="Azure-Portal-Verify" >}}
 
 **Continue to Chapter 4:  Deploy a VNET**

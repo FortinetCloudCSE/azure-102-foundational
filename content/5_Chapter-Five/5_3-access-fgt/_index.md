@@ -32,6 +32,6 @@ Did you get a response from either?  Why not?
 
 1. The diagram below is a visual representation of your VNET with the Linux VMs traffic flow via the FortiGate NVA.  This is now the active flow of traffic based on the UDRs in the Route Table.
 
-    ![4-3-Azure-access-fgt-1](../Images/4-3-Azure-access-fgt-1.PNG)
+    {{< figure src="4-3-Azure-access-fgt-1.PNG" alt="4-3-Azure-access-fgt-1" >}}
 
 **Continue to Chapter 5 - Task 4: Configure FortiGate Polices**

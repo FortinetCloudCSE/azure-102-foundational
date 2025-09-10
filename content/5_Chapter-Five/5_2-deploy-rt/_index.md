@@ -7,13 +7,13 @@ In Task Two, you will deploy a **Route Table** and modify the **Route Table** by
 
 1. Navigate into your Resource Group and click on the **+ Create** located at the top left of the tool bar.
 
-    ![Azure-creating-vnet](../Images/Azure-creating-vnet.PNG)  
+    {{< figure src="Azure-creating-vnet.PNG" alt="Azure-creating-vnet" >}}
 
     You will be redirected to the Azure Marketplace.
 
 1. In the Marketplace search bar, enter **route table** and then enter.  Navigate to the **Route table** offering from Microsoft and select **Create** and **Route table**.
 
-    ![4-2-Azure-deploy-rt-1](../Images/4-2-Azure-deploy-rt-1.PNG)
+    {{< figure src="4-2-Azure-deploy-rt-1.PNG" alt="4-2-Azure-deploy-rt-1" >}}
 
     You will be redirected to the **Create Route table** template.
 
@@ -25,19 +25,19 @@ In Task Two, you will deploy a **Route Table** and modify the **Route Table** by
         - **Propagate gateway routes**:  "**No**"
     - Select **Next**.
 
-    ![4-2-Azure-deploy-rt-2](../Images/4-2-Azure-deploy-rt-2.PNG)
+    {{< figure src="4-2-Azure-deploy-rt-2.PNG" alt="4-2-Azure-deploy-rt-2" >}}
 
 1. On the **Tags** tab, click **Next**.  Nothing to enter here.
 
 1. On the **Review + create** tab, confirm your entries under **Basics** and then select **create**.
 
-    ![4-2-Azure-deploy-rt-3](../Images/4-2-Azure-deploy-rt-3.PNG)
+    {{< figure src="4-2-Azure-deploy-rt-3.PNG" alt="4-2-Azure-deploy-rt-3" >}}
 
 1. The screen should refresh and you will see **Deployment is in progress**.
 
 1. After a few minutes, you will see **Your deployment is complete**.  Select **Go to resource**.  You will be directed to the **Studentxx_RT** Overview page.
 
-    ![4-2-Azure-deploy-rt-4](../Images/4-2-Azure-deploy-rt-4.PNG)
+    {{< figure src="4-2-Azure-deploy-rt-4.PNG" alt="4-2-Azure-deploy-rt-4" >}}
 
 1. Take a few moments and familiarize yourself with the route table **Overview** page.  
 
@@ -57,19 +57,19 @@ From the **Routes** page, select **+ Add**.
     - **Next hop address**:  "**192.168.1.36**"  (Confirm this is the same IP assigned to **port2** on your FortiGate NVA).
     - Select **Add**
 
-    ![4-2-Azure-deploy-rt-6](../Images/4-2-Azure-deploy-rt-6.PNG)
+    {{< figure src="4-2-Azure-deploy-rt-6.PNG" alt="4-2-Azure-deploy-rt-6" >}}
 
 1. You will see the new route called **Default** listed under the **Routes** section.
 
-    ![4-2-Azure-deploy-rt-7](../Images/4-2-Azure-deploy-rt-7.PNG)
+    {{< figure src="4-2-Azure-deploy-rt-7.PNG" alt="4-2-Azure-deploy-rt-7" >}}
 
 1. Continue to add two more routes for **Protected-A-Subnet** and **Protected-B-Subnet**.
 
-    ![4-2-Azure-deploy-rt-11](../Images/4-2-Azure-deploy-rt-11.PNG)
+    {{< figure src="4-2-Azure-deploy-rt-11.PNG" alt="4-2-Azure-deploy-rt-11" >}}
 
 1. When finished, the **Routes** page should have the three routes listed.  See the following diagram for confirmation.
 
-    ![4-2-Azure-deploy-rt-12](../Images/4-2-Azure-deploy-rt-12.PNG)
+    {{< figure src="4-2-Azure-deploy-rt-12.PNG" alt="4-2-Azure-deploy-rt-12" >}}
 
 1. On the left hand side, select **Subnets** and **+ Associate**.  The **Associate subnet** page will display on the right.  Enter the following:
 
@@ -77,14 +77,14 @@ From the **Routes** page, select **+ Add**.
     - **Subnet**: "**Protected-A_Subnet**"
     - Select **OK**.
 
-    ![4-2-Azure-deploy-rt-8](../Images/4-2-Azure-deploy-rt-8.PNG)
+    {{< figure src="4-2-Azure-deploy-rt-8.PNG" alt="4-2-Azure-deploy-rt-8" >}}
 
 1. Click **+ Associate** again and add the **Protected-B_Subnet**.  You should have both subnets listed under the **Subnets** tab.
 
-    ![4-2-Azure-deploy-rt-9](../Images/4-2-Azure-deploy-rt-9.PNG)
+    {{< figure src="4-2-Azure-deploy-rt-9.PNG" alt="4-2-Azure-deploy-rt-9" >}}
 
 1. Return to the **Overview** page to see a summary of the **Routes** and associated **Subnets**.
 
-    ![4-2-Azure-deploy-rt-10](../Images/4-2-Azure-deploy-rt-10.PNG)
+    {{< figure src="4-2-Azure-deploy-rt-10.PNG" alt="4-2-Azure-deploy-rt-10" >}}
 
 **Continue to Chapter 5 - Task 3: Confirm Linux VMs access via FortiGate**
