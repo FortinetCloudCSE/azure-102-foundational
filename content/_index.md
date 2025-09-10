@@ -15,6 +15,6 @@ In this course you will learn how to deploy a FortiGate NGFW and secure an Azure
 - Deploy a route table and create User Define Routes (UDR)
 - Secure the VNET and hosted services utilizing FortiGate polices
 
-![](Images/Azure-Secured-VNET.PNG)
+  {{< figure src="Azure-Secured-VNET.PNG" alt="Azure-Secured-VNET" >}}
 
 **Continue to Chapter 1: Architecture Diagrams**
