@@ -9,9 +9,9 @@ The Azure portal is a web-based, unified console that lets you create and manage
 
 The Azure portal is designed for resiliency and continuous availability. It has a presence in every Azure datacenter. This configuration makes the Azure portal resilient to individual datacenter failures and helps avoid network slowdowns by being close to users. The Azure portal updates continuously, and it requires no downtime for maintenance activities. You can access the Azure portal with any supported browser.
 
-![Azure-Service-Portal](../Images/Azure-Service-Portal.PNG)
+{{< figure src="Azure-Service-Portal.PNG" alt="Azure-Service-Portal" >}}
 
-![Azure-Service-Portal-Table](../Images/Azure-Service-Portal-Table.PNG)
+{{< figure src="Azure-Service-Portal-Table.PNG" alt="Azure-Service-Portal-Table" >}}
 
 ### Azure Resource Group
 
@@ -37,6 +37,6 @@ There are some important factors to consider when defining your resource group:
 Azure Marketplace is an online store for solutions that are built on or built for Azure and intended for IT professionals and developers. Buyers can access Azure Marketplace in the Azure portal or access the Azure Marketplace online store on the web. The Azure Marketplace online store includes listings for consulting and managed services. Azure Marketplace consulting services are professional service offerings that help customers get started with or accelerate the use of Azure.
 Azure Marketplace is a part of Azure, so you can access the catalog of Azure Marketplace solutions in the Azure portal through the **Create a resource** option. This option opens Azure Marketplace within the Azure portal, where you can search for solutions by name or by category.
 
-![Azure-Service-Marketplace](../Images/Azure-Service-Marketplace.PNG)
+{{< figure src="Azure-Service-Marketplace.PNG" alt="Azure-Service-Marketplace" >}}
 
 **Continue to Chapter 2 - Task 2: Azure Networking Concepts**

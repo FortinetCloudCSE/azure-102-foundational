@@ -30,6 +30,6 @@ FortiGate supports the following instance types on Azure:
 
 FortiGate-VM is available with different CPU and RAM sizes and you can deploy it on various private and public cloud platforms. The following table shows the models conventionally available to order, also known as bring your own license models.
 
-![Azure-FGT-Support-Models](../Images/Azure-FGT-Support-Models.PNG)
+{{< figure src="Azure-FGT-Support-Models.PNG" alt="Azure-FGT-Support-Models" >}}
 
 **Continue to Chapter 3 - Getting Started**

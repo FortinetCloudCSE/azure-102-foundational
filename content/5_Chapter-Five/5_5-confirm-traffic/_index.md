@@ -15,14 +15,14 @@ In Task five, you will confirm that the **Firewall Policies** are correct and ac
 
     From the **Linux-A-VM** CLI:
 
-    1. Ping the private IP of **Linux-B-VM** and confirm replies. 
+    1. Ping the private IP of **Linux-B-VM** and confirm replies.
 
-    1. Confirm SSH access to **Linux-B-VM** and login:  **ssh studentxx@192.168.1.xxx**"
+    1. Confirm SSH access to **Linux-B-VM** and login:  `**ssh studentxx@192.168.1.xxx**`
         - Type **exit** to disconnect from **Linux-B-VM**.
 
-    1. Confirm port 80 access to the Internet:  "**wget www.fortinet.com**"
+    1. Confirm port 80 access to the Internet:  `**wget www.fortinet.com**`
 
-    1. Confirm port 443 access to the Internet and the public IP assigned to **Linux-A-VM**: "**curl <https://ipinfo.io/ip>**"  (Confirm against what the Azure portal has listed  as the Public IP assigned to the FortiGate or confirm against the IP you used to login to the FortiGate GUI.
+    1. Confirm port 443 access to the Internet and the public IP assigned to **Linux-A-VM**: `**curl https://ipinfo.io/ip**` Confirm against what the Azure portal has listed  as the Public IP assigned to the FortiGate or confirm against the IP you used to login to the FortiGate GUI.
 
     1. From your client of choice, SSH from the Internet to the VIP assigned to **Linux-A-VM**.  If you do not have a SSH client installed, use the following website and scan for the SSH service - <https://dnschecker.org/port-scanner.php>.  Select **Port Type**:  "**Server Ports**".
 
@@ -36,19 +36,17 @@ In Task five, you will confirm that the **Firewall Policies** are correct and ac
 
     From the **Linux-B-VM** CLI:
 
-    1. Confirm port 80 access to the Internet:  "**wget www.fortinet.com**"
+    1. Confirm port 80 access to the Internet:  `**wget www.fortinet.com**`
 
-    1. Confirm port 443 access to the Internet and the public IP assigned to **Linux-B-VM**: "**curl https://ipinfo.io/ip**"  (Confirm against what the Azure portal has listed  as the Public IP assigned to the FortiGate or confirm against the IP you used to login to the FortiGate GUI.)
+    1. Confirm port 443 access to the Internet and the public IP assigned to **Linux-B-VM**: `**curl https://ipinfo.io/ip**` (Confirm against what the Azure portal has listed  as the Public IP assigned to the FortiGate or confirm against the IP you used to login to the FortiGate GUI.)
 
     1. Ping the private IP of **Linux-A-VM** and confirm replies.
 
-    1. From your local browser, open a tab and enter "**http://x.x.x.x**"  (x.x.x.x is the VIP of **Linux-B-VM**)  Confirm you get an NGINX welcome screen.
+    1. From your local browser, open a tab and enter `**http://x.x.x.x**`  (x.x.x.x is the VIP of **Linux-B-VM**)  Confirm you get an NGINX welcome screen.
 
 Congrats if you confirmed access on all the requirements above on the first check.
 
 If time permits try enabling other ports on the Linux VMs and allowing access via the FortiGate.
 Also, spend some time looking around the FortiGate NVA GUI and see if you notice differences between what options are available compared to the FortiGate hardware GUI.
 
-Thanks for attending this course.
-
-**END OF COURSE**
+Thank you for attending Azure 102 Foundational FortiGate

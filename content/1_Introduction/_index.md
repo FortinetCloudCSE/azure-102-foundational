@@ -20,10 +20,10 @@ Upon completion of this workshop, you will gain understanding of, create, and de
 - You will deploy and configure the following two architectures:
   - **Single VNET without a FortiGate NVA - Unsecured VNET**
 
-  ![Azure-Unsecured-VNET1](Images/Azure-Unsecured-VNET1.PNG)
+  {{< figure src="Azure-Unsecured-VNET1.PNG" alt="Azure-Unsecured-VNET1" >}}
 
   - **Single VNET with a FortiGate NVA - Secured VNET**
 
-  ![Azure-Secured-VNET](Images/Azure-Secured-VNET.PNG)
+  {{< figure src="Azure-Secured-VNET.PNG" alt="Azure-Secured-VNET" >}}
 
 **Continue to Chapter 2: Azure Fundamentals**

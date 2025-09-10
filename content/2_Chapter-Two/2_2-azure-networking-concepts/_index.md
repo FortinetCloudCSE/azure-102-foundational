@@ -3,7 +3,7 @@ title: "Task 2: Azure Networking Concepts"
 weight: 2
 ---
 
-![Azure-VNET-Basic](../Images/Azure-VNET-Basic.PNG)
+{{< figure src="Azure-VNET-Basic.PNG" alt="Azure-VNET-Basic" >}}
 
 ### Azure Virtual Network
 
