@@ -22,8 +22,7 @@ In the following steps, you will create an address object, a VIP, and a Firewall
 
 1. From the FortiGate GUI, navigate to **Policy & Objects**, **Addresses**, and click "**+ Create new**".
 
-    {{< figure src="" alt="" >}}
-    ![4-4-Azure-fgt-policy-1](../Images/4-4-Azure-fgt-policy-1.PNG)
+    {{< figure src="4-4-Azure-fgt-policy-1.PNG" alt="4-4-Azure-fgt-policy-1" >}}
 
 1. Enter the following:
 
@@ -34,18 +33,15 @@ In the following steps, you will create an address object, a VIP, and a Firewall
 
     Click **OK** and confirm the new address for **Linux-A-VM** is displayed.
 
-    {{< figure src="" alt="" >}}
-    ![4-4-Azure-fgt-policy-2](../Images/4-4-Azure-fgt-policy-2.PNG)
+    {{< figure src="4-4-Azure-fgt-policy-2.PNG" alt="4-4-Azure-fgt-policy-2" >}}
 
 1. Repeat step two above and create an address for **Linux-B-VM**.  Your **Address** screen should have both Linux VMs listed.
 
-    {{< figure src="" alt="" >}}
-    ![4-4-Azure-fgt-policy-6](../Images/4-4-Azure-fgt-policy-6.PNG)
+    {{< figure src="4-4-Azure-fgt-policy-6.PNG" alt="4-4-Azure-fgt-policy-6" >}}
 
 1. Navigate to **Policy & Objects**, **Virtual IPs**, and click "**+ Create new**".
 
-    {{< figure src="" alt="" >}}
-    ![4-4-Azure-fgt-policy-3](../Images/4-4-Azure-fgt-policy-3.PNG)
+    {{< figure src="4-4-Azure-fgt-policy-3.PNG" alt="4-4-Azure-fgt-policy-3" >}}
 
 1. Enter the following:
 
@@ -59,18 +55,15 @@ In the following steps, you will create an address object, a VIP, and a Firewall
 
     Click **OK** and confirm the new VIP for **Linux-A-VM** is displayed.
 
-    {{< figure src="" alt="" >}}
-    ![4-4-Azure-fgt-policy-4](../Images/4-4-Azure-fgt-policy-4.PNG)
+    {{< figure src="4-4-Azure-fgt-policy-4.PNG" alt="4-4-Azure-fgt-policy-4" >}}
 
 1. Repeat step five above and create a VIP for **Linux-B-VM**.  HTTP should be the service port.  Your **Virtual IPs** screen should have two entries.
 
-    {{< figure src="" alt="" >}}
-    ![4-4-Azure-fgt-policy-7](../Images/4-4-Azure-fgt-policy-7.PNG)
+    {{< figure src="4-4-Azure-fgt-policy-7.PNG" alt="4-4-Azure-fgt-policy-7" >}}
 
 1. Navigate to **Policy & Objects**, **Firewall Policy**, and click "**+ Create new**".
 
-    {{< figure src="" alt="" >}}
-    ![4-4-Azure-fgt-policy-5](../Images/4-4-Azure-fgt-policy-5.PNG)
+    {{< figure src="4-4-Azure-fgt-policy-5.PNG" alt="4-4-Azure-fgt-policy-5" >}}
 
 1. Enter the following:
 
@@ -84,12 +77,9 @@ In the following steps, you will create an address object, a VIP, and a Firewall
 
 Click **OK** and confirm the new policy for **Linux-A-VM** is displayed.
 
-    {{< figure src="" alt="" >}}
-![4-4-Azure-fgt-policy-8](../Images/4-4-Azure-fgt-policy-8.PNG)
-    {{< figure src="" alt="" >}}
-![4-4-Azure-fgt-policy-9](../Images/4-4-Azure-fgt-policy-9.PNG)
-    {{< figure src="" alt="" >}}
-![4-4-Azure-fgt-policy-10](../Images/4-4-Azure-fgt-policy-10.PNG)
+    {{< figure src="4-4-Azure-fgt-policy-8.PNG" alt="4-4-Azure-fgt-policy-8" >}}
+    {{< figure src="4-4-Azure-fgt-policy-9.PNG" alt="4-4-Azure-fgt-policy-9" >}}
+    {{< figure src="4-4-Azure-fgt-policy-10.PNG" alt="4-4-Azure-fgt-policy-10" >}}
 
 1. Enter the following to create a policy to allow SSH and PING access to **Linux-B-VM**.
 
@@ -103,8 +93,7 @@ Click **OK** and confirm the new policy for **Linux-A-VM** is displayed.
 
     Click **OK** and confirm the new policy is displayed.
 
-    {{< figure src="" alt="" >}}
-    ![4-4-Azure-fgt-policy-11](../Images/4-4-Azure-fgt-policy-11.PNG)
+    {{< figure src="4-4-Azure-fgt-policy-11.PNG" alt="4-4-Azure-fgt-policy-11" >}}
 
 1. Repeat and modify step nine above to finishing adding the required policies for **Linux-A-VM**, HTTP and HTTPS access to the Internet, and the following policies needed for **Linux-B-VM**.
 
@@ -116,7 +105,6 @@ Click **OK** and confirm the new policy for **Linux-A-VM** is displayed.
 
 1. When you are finished adding all the policies for both Linux-VMs, your **Firewall Policy** page should look similar to the following:
 
-    {{< figure src="" alt="" >}}
-    ![4-4-Azure-fgt-policy-12](../Images/4-4-Azure-fgt-policy-12.PNG)
+    {{< figure src="4-4-Azure-fgt-policy-12.PNG" alt="4-4-Azure-fgt-policy-12" >}}
 
 **Continue to Chapter 5 - Task 5: Confirm Managed Traffic**

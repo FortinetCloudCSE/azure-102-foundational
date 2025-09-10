@@ -46,7 +46,7 @@ In Task Two, you will deploy a **Route Table** and modify the **Route Table** by
 1. From the **Studentxx_RT** **Overview** page, navigate to **Settings** and then **Routes**.
 From the **Routes** page, select **+ Add**.
 
-    ![4-2-Azure-deploy-rt-5](../Images/4-2-Azure-deploy-rt-5.PNG)
+    {{< figure src="4-2-Azure-deploy-rt-5.PNG" alt="4-2-Azure-deploy-rt-5" >}}
 
 1. The **Add route** will display on the right.  Enter the following:
 
