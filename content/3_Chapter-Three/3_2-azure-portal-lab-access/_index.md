@@ -17,29 +17,26 @@ First log in to the Azure Portal, next access to the lab environment.
 
     <https://portal.azure.com>
 
-1. Use the credentials shared with you by your instructors.
+1. Use the credentials shared with you by your instructors or the credentials received via email.
 
-    **Username**:  "**<userXX@fortinetcloud.onmicrosoft.com>**"
+    **Username**:  "**<fgtXX@fortinetcloud.onmicrosoft.com>**"
 
-1. Enter Temporary access credentials
+1. Enter Temporary Access Pass
 
-    {{< figure src="Azure-AccessPass.png" alt="Azure-AccessPass" >}}
+    {{< figure src="azure-access-pass.png" alt="azure-access-pass" >}}
 
 1. Click **Sign in**.
-1. Click **No** on the 'Stay signed in?' prompt
-1. Click **Get started** on the 'Welcome to Microsoft Azure' page.
-1. Click **Skip** on the 'How do you plan to use Azure' page.
-1. Click **Skip** on the 'Now, let show you around Azure' page.
-1. Click on the **Home** link in the upper left corner.
+1. Click **Yes** on the 'Stay signed in?' prompt
+1. Click **Cancel** on the 'Welcome to Microsoft Azure' page.
 
-    {{< figure src="Azure-Home.PNG" alt="Azure-Home" >}}
+    {{< figure src="azure-getting-started.png" alt="azure-getting-started" >}}
 
 1. Click on **Resource Groups** in the main page.
 
-    {{< figure src="Azure-Portal-RG.PNG" alt="Azure-Portal-RG" >}}
+    {{< figure src="azure-portal-rg.png" alt="azure-portal-rg" >}}
 
-1. Confirm your resource group is shown.
+1. Confirm your resource group is shown - **fgtXX-azure102-workshop**
 
-    {{< figure src="Azure-Portal-Verify.PNG" alt="Azure-Portal-Verify" >}}
+    {{< figure src="azure-portal-verify.png" alt="azure-portal-verify" >}}
 
 **Continue to Chapter 4:  Deploy a VNET**

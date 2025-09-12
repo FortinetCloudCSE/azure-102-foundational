@@ -14,5 +14,3 @@ In task three, four, and five, you will confirm Linux VM traffic through the For
 - Task 3:  Confirm Linux VMs access via FortiGate
 - Task 4:  Configure FortiGate Policies
 - Task 5:  Confirm Managed Traffic
-
-**Continue to Chapter 5 - Task 1: Deploy a FortiGate NVA**
