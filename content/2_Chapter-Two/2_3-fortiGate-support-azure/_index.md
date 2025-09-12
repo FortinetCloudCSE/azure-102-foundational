@@ -5,31 +5,34 @@ weight: 3
 
 ### FortiGate-VM
 
-By combining stateful inspection with a comprehensive suite of powerful security features, FortiGate next generation firewall technology delivers complete content and network protection. This solution is available for deployment on Microsoft Azure.
+By combining stateful inspection with a comprehensive suite of powerful security features, FortiGate Next Generation Firewall (NGFW) technology delivers complete content and network protection. This solution is available for deployment on Microsoft Azure.
 
-In addition to advanced features such as an extreme threat database, vulnerability management, and flow-based inspection, features including application control, firewall, antivirus, IPS, web filter, and VPN work in concert to identify and mitigate the latest complex security threats.
+In addition to advanced features such as an extreme threat database, vulnerability management, and flow-based inspection, features including application control, firewall, antivirus, IPS, web filter, VPN, and SD-WAN work in concert to identify and mitigate the latest complex security threats.
 
-FortiGate-VM for Azure supports active/passive high availability (HA) configuration with FortiGate-native unicast HA synchronization between the primary and secondary nodes. When the FortiGate-VM detects a failure, the passive firewall instance becomes active and uses Azure API calls to configure its interfaces/ports.
+#### FortiGate-VM Azure Deploymnet Options
 
-FortiGate-VM also supports active/passive HA and active/active HA using Azure load balancer services.
+- Standalone NVA
+
+- Active/Passive NVAs - with these failover options
+  - Using Azure Load Balancers for failover
+  - Using Azure Resource Manager API for Public and Private IP address movement
+
+- Active/Active NVAs
+
+Azure Virtual WAN Hub deployment
 
 ### Instance Type Support
 
-FortiGate supports the following instance types on Azure:
+FortiGate-VM supports a variety of [Instance Types](https://docs.fortinet.com/document/fortigate-public-cloud/7.6.0/azure-administration-guide/562841) on Azure
 
-- Compute optimized instance types
-  - [**F Series**](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-compute)
+### Licensing
 
-- General purpose instance types
-  - [**D Series**](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-general)
+FortiGate-VM supports the following Licensing methods
 
-- Memory optimized instance types
-  - [**E Series**](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-memory)
+- PAYG - Pay As You Go - per CPU cost assessed hourly
 
-### Models
+- BYOL - Bring Your Own License
 
-FortiGate-VM is available with different CPU and RAM sizes and you can deploy it on various private and public cloud platforms. The following table shows the models conventionally available to order, also known as bring your own license models.
-
-{{< figure src="Azure-FGT-Support-Models.PNG" alt="Azure-FGT-Support-Models" >}}
+- FortiFlex - Point based entitlement assessed daily.
 
 **Continue to Chapter 3 - Getting Started**
