@@ -17,7 +17,7 @@ Deploy a VNET (Virtual Network) in the assigned workshop **Resource Group**.
 
     You will be redirected to the **Create virtual network** template.
 
-    Under the **Basics** tab, the **Subscription** and **Resource Groups** should already be filled in with your assigned info. If not, see the screen shot below for details.
+    Under the **Basics** tab, the **Subscription** and **Resource Groups** may already be filled in with your assigned info. If not, see the screenshot below for details.
 
 1. In the **Instance details** section, enter the following:
 

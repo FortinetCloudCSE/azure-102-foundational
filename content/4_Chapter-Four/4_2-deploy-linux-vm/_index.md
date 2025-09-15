@@ -1,116 +1,119 @@
 ---
-title: "Task 2: Deploy Linux Virtual Machines (VMs)"
+title: "Task 2: Deploy Linux Virtual Machines"
 weight: 2
 ---
 
 Now that a **VNET** is configured, Task 2 will cover
 
-- Deploying two Linux VMs in the VNET
-- Identify assigned public IP (PIP)
+- Deploying two Linux Virtual Machines (VMs) in the VNET
+- Identify assigned Public IP (PIP)
 - Confirm access to the Internet
 - Confirm access between each VM
 
-VM - **Linux-A-VM** will be assigned to the **Protected-A_Subnet**
-VM - **Linux-B-VM** will be assigned to the **Protected-B_Subnet**
+**linux-a-vm** will have an interface in subnet **snet-a**
+**linux-b-vm** will have an interface in subnet **snet-b**
 
-#### Steps to create Linux-A-VM
+#### Steps to create linux-a-vm
 
-1. Navigate into your Resource Group and click on the **+ Create** located at the top left of the tool bar.
+1. ***Click*** the Hamburger menu in the upper-left corner of the Azure Portal to show the "Portal Menu"
+1. ***Click*** "Virtual machines"
+1. ***Click*** "+ Create"
 
-    {{< figure src="Azure-creating-vnet.PNG" alt="Azure-creating-vnet" >}}
+    {{< figure src="azure-creating-linux-vm-1.png" alt="azure-creating-linux-vm-1" >}}
 
-    You will be redirected to the Azure Marketplace.
+    {{< figure src="azure-creating-linux-vm-2.png" alt="azure-creating-linux-vm-2" >}}
 
-1. In the Marketplace search bar, enter **ubuntu 24.04 lts** and then enter.  Navigate to the **Ubuntu 24.04 LTS - all plans including Ubuntu Pro** offering from **Canonical** and select **Create** and **Ubuntu Server 24.04 LTS**.
+1. ***Click*** Virtual Machine", You will be redirected to the **Create a virtual machine** template.
 
-    {{< figure src="Azure-create-linux-vm.PNG" alt="Azure-create-linux-vm" >}}
+    Under the **Basics** tab, the **Subscription** and **Resource Groups** may already be filled in with your assigned info. If not, see the screenshot below for details.
 
-    You will be redirected to the **Create a virtual machine** template.
+1. ***Update*** the following fields:
 
-1. Under the **Basics** tab, update the following fields:
+    (Leave the default entry for fields not listed here)
+    - Resource group:  **fgtXX-azure102-workshop**
+    - Virtual machine name:  `linux-a-vm`
+    - Availability options:  **No infrastructure redundancy required**
+    - Security type:  **Standard**
+    - Image:  Select **See all images** under the image drop-down
+
+    {{< figure src="azure-creating-linux-vm-3.png" alt="azure-creating-linux-vm-3" >}}
+
+1. ***Enter*** `Ubuntu 24.02 LTS` in the search field
+1. ***Click*** "Select"
+1. ***Click*** "Ubuntu Server 24.04 LTS - x64 Gen 1"
+
+    {{< figure src="azure-creating-linux-vm-4.png" alt="azure-creating-linux-vm-4" >}}
+
+    {{< figure src="azure-creating-linux-vm-5.png" alt="azure-creating-linux-vm-5" >}}
+
+    Continuing from **Create a virtual machine** Basics tab:
+    - Size:  Select **See all sizes** under the size drop-down
+
+    {{< figure src="azure-creating-linux-vm-6.png" alt="azure-creating-linux-vm-6" >}}
+
+1. ***Search*** for `D2s_v5`
+1. ***Select*** "D2s_v5"
+1. ***Click*** "Select"
+
+    {{< figure src="azure-creating-linux-vm-7.png" alt="azure-creating-linux-vm-7" >}}
+
+    Continuing from **Create a virtual machine** Basics tab:
+
+    - Authentication type:  **Password**
+    - Username:  `azureuser`
+    - Password:  `123Password#@!`
+    - Confirm password:  `123Password#@!`
+
+    {{< figure src="azure-creating-linux-vm-8.png" alt="azure-creating-linux-vm-8" >}}
+
+1. ***Confirm*** the changes and the other field's default entries match as shown here.
+
+    {{< figure src="azure-creating-linux-vm-9.png" alt="azure-creating-linux-vm-9" >}}
+
+1. ***Click*** **Next: Disks >**.
+
+    On the **Disk** tab, keep the default settings, take a moment to review the available disk services and settings.
+
+1. ***Click*** "Next: Networking >"
+
+    On the **Networking** tab, update the following fields:
 
     (Leave the default entry of the other fields not listed here)
-        - Resource group:  "**studentxx-azure102-rg**"
-        - Virtual machine name:  "**Linux-A-VM**"
-        - Availability options:  "**No infrastructure redundancy required**"
-        - Security type:  "**Standard**"
-        - Size:  Select "**See all sizes**"
+    - Virtual network:  ***Select***   **abc-server-vnet**
+    - Subnet:  ***Select*** **snet-a (192.168.1.128/27)**
+    - Delete public IP and NIC when VM is deleted:  **Select**
 
-    {{< figure src="Azure-create-linux-vm-8.PNG" alt="Azure-create-linux-vm-8" >}}
+1. ***Confirm*** the changes and the other field's default entries match as shown here.
 
-     - On the **Select a VM size** screen, expand the **D-Series v5** section and select "**D2as_v5**" and then click **Select**
-
-    {{< figure src="Azure-create-linux-vm-9.PNG" alt="Azure-create-linux-vm-9" >}}
-
-    - Continuing from the **Create a virtual machine** screen:
-
-        - **Authentication type**:  "**Password**"
-        - **Username**:  "**studentxx**"  (Replace xx with your student number)
-        - **Password**:  "**FortinetAzure2024!**" (Same as your Azure portal login)
-        - **Confirm password**:  "**FortinetAzure2024!**"
-
-1. Confirm the changes and the other fields default entries match the following diagram.
-
-    {{< figure src="Azure-create-linux-vm-1.PNG" alt="Azure-create-linux-vm-1" >}}
-
-    {{< figure src="Azure-create-linux-vm-2.PNG" alt="Azure-create-linux-vm-2" >}}
-
-    {{< figure src="Azure-create-linux-vm-3.PNG" alt="Azure-create-linux-vm-3" >}}
-
-1. Select **Next: Disks >**.
-
-1. On the **Disk** tab, keep the default settings and click **Next: Networking >**.
-Feel free to read through the available disk services that can be changed/enabled.
-
-1. Under the **Networking** tab, update the following fields: (Leave the default entry of the other fields not listed here)
-
-    - **Virtual network**:  "**Studentxx_VNET**"
-    - **Subnet**:  "**Protected-A_Subnet (192.168.1.128/27)**"
-    - **Public IP**:  Select **Create new**
-
-    - On the new **Create public IP address** on the right, enter the following:
-        - **Name**:  "**Linux-A-VM_PIP**"
-        - **Routing preference**:  "**Internet**"
-        - Select **OK**
-    - **Delete public IP and NIC when VM is deleted**:  **Select**
-
-1. Confirm the changes and the other fields default entries match the following diagram.
-
-    {{< figure src="Azure-create-linux-vm-4.PNG" alt="Azure-create-linux-vm-4" >}}
-
-    {{< figure src="Azure-create-linux-vm-5.PNG" alt="Azure-create-linux-vm-5" >}}
+    {{< figure src="azure-creating-linux-vm-10.png" alt="azure-creating-linux-vm-10" >}}
 
 1. Select **Review + create >**.
 
-1. Feel free to read through the **Management**, **Monitoring**, **Advanced**, and **Tags** tabs for additional services that can be changed/enabled.
+    {{% notice note %}}You are skipping the **Management**, **Monitoring**, **Advanced**, and **Tags** tabs. Feel free to review those tabs to view the available services and settings on those tabs.{{% /notice %}}
 
 1. Confirm the template validation has passed and select **Create**
 
-    {{< figure src="Azure-create-linux-vm-6.PNG" alt="Azure-create-linux-vm-6" >}}
+    {{< figure src="azure-creating-linux-vm-11.png" alt="azure-creating-linux-vm-11" >}}
 
-1. The **Deployment is in progress** notice is displayed.
+    The **Deployment is in progress** notice is displayed.
 
-    {{< figure src="Azure-create-linux-vm-7.PNG" alt="Azure-create-linux-vm-7" >}}
+    {{< figure src="azure-creating-linux-vm-12.png" alt="azure-creating-linux-vm-12" >}}
 
-1. Once the **Your deployment is complete** notice is displayed, click on the **student11-azure102-rg** link to be re-directed to your resource group.
+    Once the **Your deployment is complete** notice is displayed, click on the **fgtXX-azure102-workshop** link to be re-directed to your Resource Group.
 
-    {{< figure src="Azure-create-linux-vm-10.PNG" alt="Azure-create-linux-vm-10" >}}
+    {{< figure src="azure-creating-linux-vm-13.png" alt="azure-creating-linux-vm-13" >}}
 
-1. Verify the new **Linux-A-VM** and the associated components are listed.
+1. Verify the new **linux-a-vm** and the associated components are listed.
 
-    {{< figure src="Azure-create-linux-vm-11.PNG" alt="Azure-create-linux-vm-11" >}}
+    {{< figure src="azure-creating-linux-vm-14.png" alt="azure-creating-linux-vm-14" >}}
 
-#### Steps to create Linux-B-VM
+#### Steps to create linux-b-vm
 
-1. Follow the same 1-14 steps above to create the **Linux-B-VM**. You will need to alter the following where appropriate:
-            - **Virtual machine name**:  "**Linux-B-VM**"
-            - **Subnet**:  "**Protected-B_Subnet (192.168.1.160/27)**"
-            - **Public IP**:  Select **Create new**
-        - On the new **Create public IP address** on the right, enter the following:
-            - **Name**:  "**Linux-B-VM_PIP**"
+1. Follow the same steps to create the **linux-b-vm**. You will need to alter the following where appropriate:
 
-1. Verify the new **Linux-B-VM** and the associated components are listed.
+    - Virtual machine name:  `linux-b-vm`
+    - Subnet:  **snet-b (192.168.1.160/27)**
 
-    {{< figure src="Azure-create-linux-vm-12.PNG" alt="Azure-create-linux-vm-12" >}}
+1. Verify the new **linux-b-vm** and the associated components are listed.
 
-**Continue to Chapter 4 - Task 3: Identify VM info and Unsecured Services**
+    {{< figure src="azure-creating-linux-vm-15.png" alt="azure-creating-linux-vm-15" >}}
