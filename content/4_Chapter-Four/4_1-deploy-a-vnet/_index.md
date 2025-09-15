@@ -3,85 +3,81 @@ title: "Task 1: Deploy an Azure Virtual Network (VNET)"
 weight: 1
 ---
 
-In Task 1, you will deploy VNET (Virtual Network) in the training **Resource Group** that you have been assigned to.
+Deploy a VNET (Virtual Network) in the assigned workshop **Resource Group**.
 
-1. Navigate into your Resource Group and click on the **+ Create** located at the top left of the tool bar.
+1. ***Click*** the Hamburger menu in the upper-left corner of the Azure Portal to show the "Portal Menu"
+1. ***Click*** "Virtual networks"
+1. ***Click*** "+ Create"
 
-    {{< figure src="Azure-creating-vnet.PNG" alt="Azure-creating-vnet" >}}
+    {{< figure src="azure-portal-menu.png" alt="azure-portal-menu" >}}
 
-    You will be redirected to the Azure Marketplace.
+    {{< figure src="azure-creating-vnet-1.png" alt="azure-creating-vnet-1" >}}
 
-1. In the Marketplace search bar
-
-    - Enter **Virtual Network** and then enter
-    - Navigate to the **Virtual Network** offering from Microsoft
-    - Select **Create** and **Virtual network**.
-
-    {{< figure src="Azure-creating-vnet-1.PNG" alt="Azure-creating-vnet-1" >}}
+    {{< figure src="azure-creating-vnet-2.png" alt="azure-creating-vnet-2" >}}
 
     You will be redirected to the **Create virtual network** template.
 
-1. Under the **Basics** tab, the **Subscription** and **Resource Groups** should already be filled in with your assigned info.  If not, see the screen shot below for details.
+    Under the **Basics** tab, the **Subscription** and **Resource Groups** should already be filled in with your assigned info. If not, see the screen shot below for details.
 
-    - Under **Instance details**, enter the following:
+1. In the **Instance details** section, enter the following:
 
-        - Virtual network name: "**Studentxx_VNET**" (Replace "**xx**" with your assigned student number)
-        - Region: "**(US) West US 3**"
+    - Virtual network name: `abc-server-vnet`
+    - Region: **(US) West US 3**
 
-    - Click **Next**.
+1. ***Click*** "Next : Security"
 
-    {{< figure src="Azure-creating-vnet-2.PNG" alt="Azure-creating-vnet-2" >}}
+    {{< figure src="azure-creating-vnet-3.png" alt="azure-creating-vnet-3" >}}
 
-1. On the **Security** tab, make sure **none** of the services are selected and click **Next**.
-Feel free to read through the available services that can be enabled.
+1. On the **Security** tab, ensure **none** of the services are selected - Feel free to read through the available services that can be enabled.
 
-1. On the **IP address** tab, edit the default address space to "**192.168.1.0/24**".
+1. ***Click*** "Next : IP addresses"
 
-    - Select the edit button (Red) next to the "default" subnet and, in the new window to the right, update the following info:  
+1. ***Edit*** the default address space, change to `192.168.1.0/24`
 
-        - Name:  "**External_Subnet**"
-        - Starting address:  "**192.168.1.0**"
-        - Size: "**/27**"
+1. ***Click*** The pencil icon to the right of the "default" subnet, in the new window to the right, update the following settings:  
 
-    - Select **Save**
+    - Name:  `snet-a`
+    - Starting address: `192.168.1.128`
+    - Size: **/27**
+    - Click **Save**
 
-        {{< figure src="Azure-creating-vnet-3.PNG" alt="Azure-creating-vnet-3" >}}
+    {{< figure src="azure-creating-vnet-4.png" alt="azure-creating-vnet-4" >}}
 
-    - Select **+ Add a subnet** (see red below), and add the following info:
+1. ***Click*** "+ Add a subnet" add the following subnet:
 
-        {{< figure src="Azure-creating-vnet-4.PNG" alt="Azure-creating-vnet-4" >}}
+    - Name:  `snet-b`
+    - Starting address: `192.168.1.160`
+    - Size: **/27**
+    - Click **Add**
 
-1. Continue to **+ Add a subnet**
+    {{< figure src="azure-creating-vnet-5.png" alt="azure-creating-vnet-5" >}}
 
-    - Add "**Protected-A_Subnet**"
-    - Add "**Protected-B_Subnet**"
+1. ***Click*** "Review + create"
 
-        With their respective subnets. See the diagram below for **IP address range** assignments.  
+    {{< figure src="azure-creating-vnet-6.png" alt="azure-creating-vnet-6" >}}
 
-    - Click **Next**.
+1. ***Confirm*** the settings
 
-    {{< figure src="Azure-creating-vnet-5.PNG" alt="Azure-creating-vnet-5" >}}
+1. ***Click*** "Create"
 
-1. On the **Tags** tab, click **Next**.
+    {{< figure src="azure-creating-vnet-7.png" alt="azure-creating-vnet-7" >}}
 
-1. On the **Review + create** tab
+1. ***Click*** your Resource Group link, When the deployment is complete
 
-    - confirm the template summary and select **create**.
+    {{< figure src="azure-creating-vnet-8.png" alt="azure-creating-vnet-8" >}}
 
-    {{< figure src="Azure-creating-vnet-6.PNG" alt="Azure-creating-vnet-6" >}}
+Your Resource Group should now have a VNET named **abc-server-vnet**
 
-1. When the deployment is complete, you will get a **Your deployment is complete** notice.
+{{< figure src="azure-creating-vnet-9.png" alt="azure-creating-vnet-9" >}}
 
-    - Confirm your deployment has completed and under **Resource group** select the "**studentxx-azure102-rg**" link.  See red section below.
+1. ***Click*** on the VNET name and explore the various settings that can be applied to or utilized with an Azure Virtual Network.
 
-    {{< figure src="Azure-creating-vnet-7.PNG" alt="Azure-creating-vnet-7" >}}
+1. ***Click*** on "Subnets" under "Settings" to view the subnets that were just created.
 
-1. Your screen should return you to your respective resource group with the new virtual network listed.  Feel free to click on the new virtual network and look around.
+{{< figure src="azure-creating-vnet-10.png" alt="azure-creating-vnet-10" >}}
 
-    {{< figure src="Azure-creating-vnet-8.PNG" alt="Azure-creating-vnet-8" >}}
+{{< figure src="azure-creating-vnet-11.png" alt="azure-creating-vnet-11" >}}
 
-1. You have just created an **Azure virtual network (VNET)**.  The diagram below is a visual representation of your new VNET.
+At this point these are your Azure Resources
 
-    {{< figure src="Azure-VNET-Basic.PNG" alt="Azure-VNET-Basic" >}}
-
-**Continue to Chapter 4 - Task 2: Deploy Linux Virtual Machines (VMs).**
+{{< figure src="azure-vnet-basic.png" alt="azure-vnet-basic" >}}
