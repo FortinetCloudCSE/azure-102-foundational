@@ -1,98 +1,132 @@
 ---
-title: "Task 3: Identify VM Info and Unsecured Services"
+title: "Task 3: Identify VM Information and Unsecured Services"
 weight: 3
 ---
 
-Now that you have deployed both Linux virtual machines, **Linux-A-VM** and **Linux-B-VM**, you are going to identify their assigned private and public IP (PIP) addresses, confirm which ports are open on each VM, and what access is available to and from their assigned subnets.
+### Login to Linux VM Serial Console
 
-In the following steps 1-6, you will learn how to navigate and identify IP information for both VMs and login to each VM via the console.
+Now that both Linux virtual machines, **linux-a-vm** and **linux-b-vm**, have been deployed, you are going to identify their assigned private and public IP (PIP) addresses, confirm which ports are open on each VM, and what access is available to and from their assigned subnets.
 
- **Useful Hint: Access the serial console of both virtual machines in different tabs to help simply navigation.**
+In the following steps 1-6, you will navigate and identify IP information for both VMs and login to each VM via the serial console, in Azure.
 
-1. Navigate into your Resource Group and right click on the virtual machine **Linux-A-VM**.  Select **Open Link in New Tab**
+{{% notice tip %}}Access the serial console of each virtual machine in different browser tabs.{{% /notice %}}
 
-    {{< figure src="Azure-identify-pip-access.PNG" alt="Azure-identify-pip-access" >}}
+1. ***Navigate*** to your Resource Group
+1. ***Right Click*** on the virtual machine **linux-a-vm**
+1. ***Select*** "Open Link in New Tab"
 
-    You will see the **Linux-A-VM** Overview page in a new tab.
+    {{< figure src="azure-identify-pip-access-1.png" alt="azure-identify-pip-access-1" >}}
 
-1. Under the **Essentials** and **Properties** sections, right hand side, identify the assigned private and public IP of **Linux-A_VM**
+    The browser tab will open to the **linux-a-vm** Overview page, under the **Essentials** and **Properties** sections, right-hand side, identify the assigned private and public IP of **linux-a-vm**
 
-    - Navigate to the bottom left of the screen, expand the **Help** menu, and select **Serial console**.
+    {{< figure src="azure-identify-pip-access-2.png" alt="azure-identify-pip-access-2" >}}
 
-    {{< figure src="Azure-identify-pip-access1.PNG" alt="Azure-identify-pip-access1" >}}
+1. ***Navigate*** to the bottom of the left-side menu
 
-    You will be redirected to the **Linux-A-VM | Serial Console** screen.
+1. ***Expand*** "Help"
 
-1. Login to the **Linux-A-VM** console using the credentials you used when creating the **Linux-A-VM**.
+1. ***Select*** "Serial console"
 
-    {{< figure src="Azure-identify-pip-access2.PNG" alt="Azure-identify-pip-access2" >}}
+1. ***Login*** to the **linux-a-vm** console using the credentials used when creating the **linux-a-vm**.
 
-1. Return to the **studentxx-azure102-rg** tab and right click on the virtual machine **Linux-B-VM**.  Select **Open Link in New Tab**  
+    {{< figure src="azure-identify-pip-access-3.png" alt="azure-identify-pip-access-3" >}}
 
-    You will see the **Linux-B-VM** Overview page in a new tab.
+1. ***Repeat*** the same process to login to the serial console of **linux-b-vm-in another tab
 
-1. Under the **Essentials** and **Properties** sections, right hand side, identify the assigned private and public IP of **Linux-B-VM**
+### The VNET security policy for company ABC is as follows
 
-    - Navigate to the bottom left of the screen, expand the **Help** menu, and select **Serial console**.
+**linux-a-vm** will be the management server. Per company ABC security policy:
 
-        You will be redirected to the **Linux-B-VM | Serial Console** screen.
+- **linux-a-vm** should only have SSH and PING access to **linux-b-vm**
+- **linux-a-vm** should have HTTP/HTTPS access to the Internet
+- **linux-a-vm** should be SSH accessible from the Internet
 
-1. Login to the **Linux-B-VM** console using the credentials you used when creating **Linux-B-VM**.
+**linux-b-vm** is the www server.  Per company ABC security policy:
 
-    **The VNET security policy for company ABC is as follows:**
+- **linux-b-vm** should be HTTP accessible from the Internet
+- **linux-b-vm** should have HTTP and HTTPS access to the Internet
+- **linux-b-vm** should only have PING access to **linux-a-vm**
 
-    - **Linux-A-VM** will be the management server. Per company ABC security policy, it should only have SSH and PING access to **Linux-B-VM** and HTTP/HTTPS access to the Internet. There should also be SSH access to **Linux-A-VM** from the Internet.
+The goals of the following steps, are to note:
 
-    - **Linux-B-VM** is the www server. Only HTTP services from the Internet should be allowed.  It will also have HTTP and HTTPS access to the Internet and only PING access to **Linux-A-VM**.
+- Which service ports are open and listening on each VM
+- What access does each VM have across subnets
+- Which services to and from the Internet are available to each VM  
 
-    The goals of the following steps seven and eight, are to note what service ports are open and listening on each VM, what access does each VM have across subnets, and what services to and from the Internet each VM has exposed and access to.  
+Using this information, we can implement company ABC's security policies when securing the VNET with a **FortiGate**
 
-    With this information, we can implement company ABC's VNET security policies when securing the VNET in **Chapter Five: Securing the VNET**.  
+Configure **linux-b-vm** first
 
-    **Make sure to configure **Linux-B-VM** first - Step seven**
-1. From the **Linux-B-VM** CLI:
+{{% notice tip %}}Use the linux `clear` command to clear the screen{{% /notice %}}
 
-    - a. Ping `**www.yahoo.com**` and confirm DNS and ICMP access to the internet:  `**ping www.yahoo.com**` (CTRL+c to stop ping)
-    - Confirm port 80 access to the Internet:  `**wget www.fortinet.com**`.  (Confirm "200 OK" response)
-    - Confirm port 443 access to the Internet and the public IP assigned to **Linux-B-VM**: `**curl https://ipinfo.io/ip**`.  (Confirm against what the Azure portal listed in step five above)
-    - Check for Ubuntu updates and install them:  
-        - "**sudo apt update**"
-        - "**sudo apt upgrade**" and select "**Y**".
-        - Type "**clear**" after the updates have finished.
-    - Install the web service **NGINX**:  "**sudo apt install nginx**" and select "**Y**".
-    - Checking access to **Linux-A-VM**:
-    - Ping the private IP of **Linux-A-VM** and confirm replies.  (See step two above for IP)
-    - Install **NMAP**:  "**sudo apt install nmap**" and select "**Y**"
-    - Scan open ports on **Linux-A-VM**:  "**nmap -F 192.168.1.xxx**"  (See step two above for IP)
-    Note the open port(s) on **Linux-A-VM**
-    - Confirm SSH access to **Linux-A-VM**:
-        - Login via SSH:  `**ssh studentxx@192.168.1.xxx**`
-        - Run "**sudo ss -ltn**" to confirm the same open ports that NMAP reported
-        - Type **exit** to disconnect from **Linux-A-VM**
+1. ***Verify*** Connectivity and Services
 
-1. From the **Linux-A-VM** CLI:
-    - Ping `**www.yahoo.com**` and confirm replies.  (CTRL+c to stop ping)
-    - Confirm port 80 access to the Internet:  `**wget www.fortinet.com**`
-    - Confirm port 443 access to the Internet and the public IP assigned to **Linux-A-VM**: `**curl https://ipinfo.io/ip**`  (Confirm against what the Azure portal listed in step two above)
-    - Check for Ubuntu updates and install them:  
-        - "**sudo apt update**"
-        - "**sudo apt upgrade**" and select "**Y**".
-        - Type "**clear**" after the updates have finished.
-    - Ping the private IP of **Linux-B-VM** and confirm replies.  (See step five above for IP)
-    - Install **NMAP**:  "**sudo apt install nmap**"
-    - Scan open ports on **Linux-B-VM**:  "**nmap -F 192.168.1.xxx**"  (Note step five above for IP)
-    Note the open port(s) on **Linux-B-VM**.
-    - Confirm SSH access to **Linux-B-VM**:
-        - Login via SSH:  `**ssh studentxx@192.168.1.xxx**`
-        - Run "**sudo ss -ltn**" to confirm the same open ports that NMAP reported.
-        - Type **exit** to disconnect from **Linux-B-VM**.
+    {{% notice note %}}These commands are completed from the **linux-b-vm**{{% /notice %}}
 
-The following diagram is a visual representation of your current VNET and VM deployment.
+    - Use `ping www.yahoo.com`
+      - confirms DNS and ICMP access to the Internet: (CTRL+c to stop ping)
+    - Use `wget www.fortinet.com`
+      - confirms port 80 access to the Internet:  (Confirm "200 OK" response)
+    - Use `curl https://ipinfo.io/ip && echo " linux-b-vm's PIP"`
+      - confirms port 443 access to the Internet
+      - confirms Public IP assigned to **linux-b-vm**: (***Verify*** against what the Azure portal listed in the Overview section for this VM)
 
-{{< figure src="Azure-Unsecured-VNET1.PNG" alt="Azure-Unsecured-VNET1" >}}
+    {{< figure src="azure-identify-pip-access-4.png" alt="azure-identify-pip-access-4" >}}
 
-What do steps seven and eight, above, tell you about access to/from the Internet to both Linux VMs?  Does this match company ABC's VNET security policy?
+    - ***Check*** for and install Ubuntu updates
+        - `sudo apt update`
+        - `sudo apt -y upgrade`
+        - `clear` after updates have finished
 
-What do steps seven and eight, above, tell you about access between each Linux VM in different subnets?  Does this match company ABC's VNET security policy?
+    - ***Ping*** the private IP of **linux-a-vm**
+      - `ping 192.168.1.xxx` (Refer to previous steps for Private IP)
 
-**Continue to Chapter Five: Securing the VNET**
+    - ***Install*** **NMAP** Scan open ports on **linux-a-vm**
+      - `sudo apt -y install nmap`
+      - `nmap -F 192.168.1.xxx` (Refer to previous steps for Private IP)
+      - ***Note*** the open port(s) on **linux-a-vm**
+
+    {{< figure src="azure-identify-pip-access-5.png" alt="azure-identify-pip-access-5" >}}
+
+    - ***Confirm*** SSH access to **linux-a-vm**:
+      - `ssh azureuser@192.168.1.xxx` (Refer to previous steps for Private IP)
+      - Use `sudo ss -ltn` to confirm the same open ports that NMAP reported
+      - Use `exit` to disconnect from **linux-a-vm**
+
+    {{< figure src="azure-identify-pip-access-6.png" alt="azure-identify-pip-access-6" >}}
+    {{< figure src="azure-identify-pip-access-7.png" alt="azure-identify-pip-access-7" >}}
+
+    - ***Install*** the web service **NGINX**
+      - `sudo apt -y install nginx`
+
+    {{% notice note %}}These commands are completed from the **linux-a-vm**{{% /notice %}}
+
+    - Use `ping www.yahoo.com`
+      - confirms DNS and ICMP access to the Internet: (CTRL+c to stop ping)
+    - Use `wget www.fortinet.com`
+      - confirms port 80 access to the Internet:  (Confirm "200 OK" response)
+    - Use `curl https://ipinfo.io/ip && echo " linux-a-vm's PIP"`
+      - confirms port 443 access to the Internet
+      - confirms Public IP assigned to **linux-a-vm**: (***Verify*** against what the Azure portal listed in the Overview section for this VM)
+
+    - ***Check*** for and install Ubuntu updates
+        - `sudo apt update`
+        - `sudo apt -y upgrade`
+        - `clear` after updates have finished
+
+    - ***Ping*** the private IP of **linux-b-vm**
+      - `ping 192.168.1.xxx` (Refer to previous steps for Private IP)
+
+    - ***Install*** **NMAP** Scan open ports on **linux-b-vm**
+      - `sudo apt -y install nmap`
+      - `nmap -F 192.168.1.xxx` (Refer to previous steps for Private IP)
+      - ***Note*** the open port(s) on **linux-a-vm**
+
+    - ***Confirm*** SSH access to **linux-b-vm**:
+      - `ssh azureuser@192.168.1.xxx` (Refer to previous steps for Private IP)
+      - Use `sudo ss -ltn` to confirm the same open ports that NMAP reported
+      - Use `exit` to disconnect from **linux-b-vm**
+
+The following diagram is a representation of your current VNET and VM deployment.
+
+{{< figure src="azure-unsecured-vnet.png" alt="azure-unsecured-vnet" >}}

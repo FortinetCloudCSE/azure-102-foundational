@@ -5,16 +5,16 @@ weight: 4
 
 In Task Three, you will confirm the Linux VMs are using the FortiGate NVA as their default route and that all traffic to/from the Linux VMs is going through the FortiGate.
 
-1. Navigate into your **Resource Group** and open, in separate tabs, the **FortiGate** GUI, the **Linux-A-VM** console, and the **Linux-B-VM** console.  
+1. Navigate into your **Resource Group** and open, in separate tabs, the **FortiGate** GUI, the **linux-a-vm** console, and the **linux-b-vm** console.  
 
-1. From the **Linux-A-VM** console, run the following:
+1. From the **linux-a-vm** console, run the following:
 
     - `ping www.yahoo.com`
     - `ping 192.168.1.164`
 
 Did you get a response from either?  Why not?
 
-1. From the **Linux-B-VM** console, run the following:
+1. From the **linux-b-vm** console, run the following:
 
     - `ping www.yahoo.com`
     - `ping 192.168.1.132`
