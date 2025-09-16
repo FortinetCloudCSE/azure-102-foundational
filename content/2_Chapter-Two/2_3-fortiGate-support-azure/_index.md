@@ -34,5 +34,3 @@ FortiGate-VM supports the following Licensing methods
 - BYOL - Bring Your Own License
 
 - FortiFlex - Point based entitlement assessed daily.
-
-**Continue to Chapter 3 - Getting Started**
