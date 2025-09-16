@@ -23,4 +23,4 @@ Provision an environment **only** if this session is being run without pre-stage
 
  {{% /notice %}}
 
-**Continue to Chapter 3 - Task 2: Azure Portal - Lab Access**
+**Continue to Chapter 3 - Task 1: Azure Portal - Lab Access**

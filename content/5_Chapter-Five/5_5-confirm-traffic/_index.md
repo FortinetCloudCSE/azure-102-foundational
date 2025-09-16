@@ -52,7 +52,7 @@ In Task 5, you will confirm that the **Firewall Policies** are correct and accom
         - Confirm port 443 access to the Internet and the public IP assigned to **linux-b-vm**
         - Confirm against what the Azure portal has listed as the Public IP assigned to the FortiGate
 
-    1. From your local browser, open a tab and enter `http://x.x.x.x`
+    1. From your local browser, open a tab and enter `http://x.x.x.x:8080`
       - x.x.x.x is the Public IP of the FortiGate
       - Confirm the display of NGINX welcome screen.
 

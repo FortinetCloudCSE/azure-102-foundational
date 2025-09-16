@@ -135,9 +135,9 @@ In Task 2, you will deploy a **Route Table** and modify the **Route Table** by a
     {{< figure src="azure-deploy-route-table-15.png" alt="azure-deploy-route-table-15" >}}
     {{< figure src="azure-deploy-route-table-16.png" alt="azure-deploy-route-table-16" >}}
 
-1. ***Repeat*** for "linux-a-vm-ip"
+1. ***Repeat*** for "linux-b-vm-ip"
 
-Because the Route Table is directing traffic to the FortiGate using the Public IPs attached to the Linux VMs is not possible because traffic leaving Linux VMs will be forced to the FortiGate and there will be no awareness and the traffic will be dropped.
+Because the Route Table is associated to the VNET, directing traffic to the FortiGate using the Public IPs attached to the Linux VMs is not possible because traffic leaving Linux VMs will be forced to the FortiGate and there will be no awareness and the traffic will be dropped.
 
 The following diagram is a representation of your current VNET with Linux VM deployment and FortiGate NVA
 

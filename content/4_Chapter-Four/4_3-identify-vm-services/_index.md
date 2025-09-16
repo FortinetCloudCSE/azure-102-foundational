@@ -99,6 +99,8 @@ Configure **linux-b-vm** first
     - ***Install*** the web service **NGINX**
       - `sudo apt -y install nginx`
 
+Configure **linux-a-vm** second
+
     {{% notice note %}}These commands are completed from the **linux-a-vm**{{% /notice %}}
 
     - Use `ping www.yahoo.com`
