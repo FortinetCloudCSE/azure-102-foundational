@@ -3,128 +3,155 @@ title: "Task 1:  Deploy a FortiGate NVA"
 weight: 4
 ---
 
-In the following task, you will deploy a FortiGate network virtual appliance (NVA)in the training Resource Group that you have been assigned.  After deployment, you will login to the FortiGate and verify a few settings.
+In the following task, you will deploy a FortiGate network virtual appliance (NVA) in your Resource Group.  After deployment, you will login to the FortiGate and verify settings.
 
-### Creation Steps
+### FortiGate Deployment - Prerequisite
 
-1. Navigate into your Resource Group and click on the **+ Create** located at the top left of the tool bar.
+The Single Fortinet FortiGate requires two interfaces
 
-    {{< figure src="Azure-creating-vnet.PNG" alt="Azure-creating-vnet" >}}
+- external (port1) untrusted interface
+- internal (port2) trusted interface
+
+These interfaces require two additional subnets be added to VNET **acb-server-vnet**
+
+Access **acb-server-vnet** and add these two subnets
+
+- snet-external with address space 192.168.1.0/27
+- snet-internal with address space 192.168.2.32/27
+
+Use these screen shots for reference
+
+{{< figure src="azure-deploy-fgt-new-subnets-1.png" alt="azure-deploy-fgt-new-subnets-1" >}}
+{{< figure src="azure-deploy-fgt-new-subnets-2.png" alt="azure-deploy-fgt-new-subnets-2" >}}
+
+### FortiGate Deployment
+
+1. ***Navigate*** to you Resource Group
+1. ***Click*** "+ Create"
+
+    {{< figure src="azure-deploy-fgt-1.png" alt="azure-deploy-fgt-1" >}}
 
     You will be redirected to the Azure Marketplace.
 
-1. In the Marketplace search bar, enter **Fortinet FortiGate** and then enter.  Navigate to the **Fortinet FortiGate Next-Generation Firewall** offering from Fortinet and select **Create** and **Single VM**.
+1. ***Search*** for `Fortinet FortiGate`
+1. ***Select*** "Fortinet FortiGate Next-Generation Firewall" 
+1. ***Click*** "Create"
+1. ***Click*** "Single VM"
 
-    {{< figure src="4-1-Azure-deploy-fgt-1.PNG" alt="4-1-Azure-deploy-fgt-1" >}}
+    {{< figure src="azure-deploy-fgt-2.png" alt="azure-deploy-fgt-2" >}}
 
     You will be redirected to the **Create Single VM** template.
 
-1. Under the **Basics** tab, the **Subscription** and **Resource Groups** should already be filled in with your assigned info.  If not, see the screen shot below for details.
+    Under the **Basics** tab, the **Subscription** and **Resource Groups** may already be filled in with your assigned info. If not, see the screenshot below for details.
 
-    - Under **Instance details**, select/enter the following:
-        - **Region**:  "**West US 3**"  
-        - **FortiGate administrative username**:  "**studentxx**"
-        - **FortiGate password**/**Confirm password**:  "**FortinetAzure2024!**"
-        - **Fortigate Name Prefix**:  "**studentxx**"
-        - **Fortigate Image SKU**:  "**Pay As You Go**"
-        - **Fortigate Image Version**: "**7.4.4**"
-    - Select **Next**.
+1. Under **Instance details**, select/enter the following:
 
-    {{< figure src="4-1-Azure-deploy-fgt-2.PNG" alt="4-1-Azure-deploy-fgt-2" >}}
+    - Region:  **West US 3**  
+    - FortiGate VM instance Architecture: "X64 - Intel / AMD based processors | Gen1 VM FortiGate 6.4 - 7.4"
+    - FortiGate administrative username:  `azureuser`
+    - FortiGate password: `123Password#@!`
+    - Confirm password:  `123Password#@!`
+    - FortiGate Name Prefix:  **sgl**
 
-1. On the **Instance** tab, review the default entries.  Note the two blue shaded areas under **FortiGate License** for future knowledge.
-    - Select **Next**.
+1. ***Click*** "Next"
 
-    {{< figure src="4-1-Azure-deploy-fgt-3.PNG" alt="4-1-Azure-deploy-fgt-3" >}}
-    {{< figure src="4-1-Azure-deploy-fgt-4.PNG" alt="4-1-Azure-deploy-fgt-4" >}}
+    {{< figure src="azure-deploy-fgt-3.png" alt="azure-deploy-fgt-3" >}}
 
-1. On the **Networking** tab, enter/edit the following:
+1. On the **Instance** tab, select the following
 
-    - **Virtual network**:  "**Studentxx_VNET (studentxx-azure102-rg)**".  (Do not select the option with the prepended (NEW)).
-    - **External Subnet**:  "**External_Subnet**"
-    - **Internal subnet**:  "**Internal_Subnet**"
-    - **Protected subnet**:  "**Protected-A_Subnet**"
-    - **Accelerated Networking**:  "**Enabled**"
-    - Select **Next**.
+    - Fortigate-VM License Type: "Pay As You Go"
+    - Fortigate Image Version: "7.4.x" - **Select the latest version**
 
-    {{< figure src="4-1-Azure-deploy-fgt-5.PNG" alt="4-1-Azure-deploy-fgt-5" >}}
-    {{< figure src="4-1-Azure-deploy-fgt-6.PNG" alt="4-1-Azure-deploy-fgt-6" >}}
+    {{% notice tip %}}Note the blue shaded areas, they are links to additional information{{% /notice %}}
+
+1. ***Click*** "Next"
+
+    {{< figure src="azure-deploy-fgt-4.png" alt="azure-deploy-fgt-4" >}}
+
+1. On the **Networking** tab, select the following:
+
+    - Virtual network:  **abc-server-vnet**
+    - External Subnet:  **snet-external**
+    - Internal subnet:  **snet-internal**
+    - Protected subnet: **snet-a**
+    - Accelerated Networking:  **Enabled**
+
+    {{% notice note %}}snet-b will be protected as well, the template just does not have a selection for it.{{% /notice %}}
+
+1. ***Click*** "Next"
+
+    {{< figure src="azure-deploy-fgt-5.png" alt="azure-deploy-fgt-5" >}}
 
 1. On the **Public IP** tab, keep the default **Public IP address** already entered.  It should have a "**(new)**" listed in the beginning of the field.
 
-    - Select **Next**
+1. ***Click*** "Next"
 
-    {{< figure src="4-1-Azure-deploy-fgt-7.PNG" alt="4-1-Azure-deploy-fgt-7" >}}
+    {{< figure src="azure-deploy-fgt-6.png" alt="azure-deploy-fgt-6" >}}
 
-1. On the **Advanced** tab, keep the default settings.  Note the option for the FortiGate to be managed by a FortiManager.
+1. On the **Advanced** tab, keep the default settings.
 
-    - Select **Next**.
-    {{< figure src="4-1-Azure-deploy-fgt-8.PNG" alt="4-1-Azure-deploy-fgt-8" >}}
-    {{< figure src="4-1-Azure-deploy-fgt-9.PNG" alt="4-1-Azure-deploy-fgt-9" >}}
+1. ***Click*** "Review + create"
+
+    {{< figure src="azure-deploy-fgt-7.png" alt="azure-deploy-fgt-7" >}}
 
 1. On the **Review + create** tab, scroll down and review the template entries.
 
-    - Select **Create**.
+1. ***Click*** "Create"
 
-    {{< figure src="4-1-Azure-deploy-fgt-10.PNG" alt="4-1-Azure-deploy-fgt-10" >}}
+    {{< figure src="azure-deploy-fgt-8.png" alt="azure-deploy-fgt-8" >}}
 
-1. The screen should refresh and you will see **Deployment is in progress**.
+    The screen will refresh and you will see **Deployment is in progress**.
 
-    {{< figure src="4-1-Azure-deploy-fgt-11.PNG" alt="4-1-Azure-deploy-fgt-11" >}}
+    {{< figure src="azure-deploy-fgt-9.png" alt="azure-deploy-fgt-9" >}}
 
-1. After a few minutes, you will see **Your deployment is complete**.  Select **Go to resource group**
+    After a few minutes, you will see **Your deployment is complete**
 
-    {{< figure src="4-1-Azure-deploy-fgt-12.PNG" alt="4-1-Azure-deploy-fgt-12" >}}
+1. ***Click*** Go to resource group
+
+    {{< figure src="azure-deploy-fgt-10.png" alt="azure-deploy-fgt-10" >}}
 
 1. Confirm the FortiGate NVA and its related services have been deployed.
 
-    {{< figure src="4-1-Azure-deploy-fgt-13.PNG" alt="4-1-Azure-deploy-fgt-13" >}}
+    {{< figure src="azure-deploy-fgt-11.png" alt="azure-deploy-fgt-11" >}}
 
-1. Select **studentxx-FGT** and the Overview page will be displayed.  Look under the **Properties** tab/Networking section (mid screen, right hand column) and identify the **Public IP address** and **Private IP address**.  This information is redundant and listed in several places.  (See right hand column under **Essentials**)
+1. ***Click*** "sgl-fgt"
 
-    {{< figure src="4-1-Azure-deploy-fgt-14.PNG" alt="4-1-Azure-deploy-fgt-14" >}}
+1. ***View*** Public IP address on overview page
 
-1. Copy and paste the **Public IP address** into your local browser and you should be directed to the FortiGate NVA login page.  Don't forget to prefix the **Public IP address** with **https://**
+    {{< figure src="azure-deploy-fgt-12.png" alt="azure-deploy-fgt-12" >}}
 
-1. Enter the login info you created in **Step 3** above.  You will be presented with the **FortiGate Setup** page.  Click "**Begin**"
+### FortiGate Access
 
-    {{< figure src="4-1-Azure-deploy-fgt-22.PNG" alt="4-1-Azure-deploy-fgt-22" >}}
+1. ***Use*** the "Public IP address" in a browser to access the FortiGate interface
 
-1. On the **Migrate Config with FortiConverter** page, click "**Later**"
+1. ***Enter*** the login info from above
 
-    {{< figure src="4-1-Azure-deploy-fgt-19.PNG" alt="4-1-Azure-deploy-fgt-19" >}}
+    {{< figure src="azure-deploy-fgt-13.png" alt="azure-deploy-fgt-13" >}}
 
-1. On the **Automatic Patch Upgrades for v7.4** page, click "**Save and continue**"
+1. ***Click*** "Begin" on the **FortiGate Setup** page
 
-    {{< figure src="4-1-Azure-deploy-fgt-20.PNG" alt="4-1-Azure-deploy-fgt-20" >}}
+    {{< figure src="azure-deploy-fgt-14.png" alt="azure-deploy-fgt-14" >}}
 
-1. On the **Disable Automatic Patch Upgrades** page, select "**I acknowledge**" and then "**OK**"
+1. ***Click*** "Later" on the **Migrate Config with FortiConverter** page
 
-    {{< figure src="4-1-Azure-deploy-fgt-21.PNG" alt="4-1-Azure-deploy-fgt-21" >}}
+    {{< figure src="azure-deploy-fgt-15.png" alt="azure-deploy-fgt-15" >}}
 
-1. On the **Dashboard Setup** page, select "**OK**"
+1. ***Click*** "Save and continue" on the **Automatic Patch Upgrades for v7.4** page
 
-    {{< figure src="4-1-Azure-deploy-fgt-23.PNG" alt="4-1-Azure-deploy-fgt-23" >}}
+    {{< figure src="azure-deploy-fgt-16.png" alt="azure-deploy-fgt-16" >}}
 
-1. On the **What's new in FortiOS 7.4** video, select "**Don't show again**" and "**OK**".
+1. ***Select*** "I acknowledge" and ***Click*** "OK" on the **Disable Automatic Patch Upgrades** page
 
-    {{< figure src="4-1-Azure-deploy-fgt-15.PNG" alt="4-1-Azure-deploy-fgt-15" >}}
+   {{< figure src="azure-deploy-fgt-17.png" alt="azure-deploy-fgt-17" >}}
 
-1. Look around and get familiar with the **Dashboard/Status** page.  Note items such as the **Virtual Machine** widget with the PAYGO license, **Firmware** version, and **WAN IP**.
+1. ***Click*** "OK" on the **Dashboard Setup** page
 
-    {{< figure src="4-1-Azure-deploy-fgt-16.PNG" alt="4-1-Azure-deploy-fgt-16" >}}
+    {{< figure src="azure-deploy-fgt-18.png" alt="azure-deploy-fgt-18" >}}
 
-1. Navigate on the left to **Network** and **Interfaces**.  Note the **port1** and **port2** interfaces and assigned private IP address.
+1. ***Select*** "**Don't show again**" and ***Click*** "OK" on the **What's new in FortiOS 7.4** video
 
-    - **Why did they get assigned these subnets?**
-    Note the private IP address for both **port1** and **port2**.  You will need this info for future tasks.
+    {{< figure src="azure-deploy-fgt-19.png" alt="azure-deploy-fgt-19" >}}
 
-    {{< figure src="4-1-Azure-deploy-fgt-17.PNG" alt="4-1-Azure-deploy-fgt-17" >}}
+The following diagram is a representation of your current VNET with Linux VM deployment and FortiGate NVA
 
-1. Feel free to continue looking around the FortiGate GUI and see if you notice screens that are different compared to a hardware FortiGate GUI.
-
-1. You have just deployed a **FortiGate NVA**.  The diagram below is a visual representation of your VNET with the Linux VMs and FortiGate NVA.
-
-    {{< figure src="4-1-Azure-deploy-fgt-18.PNG" alt="4-1-Azure-deploy-fgt-18" >}}
-
-**Continue to Chapter 5 - Task 2: Deploy a Route Table and Create a UDR**
+{{< figure src="azure-deploy-fgt-20.png" alt="azure-deploy-fgt-20" >}}
