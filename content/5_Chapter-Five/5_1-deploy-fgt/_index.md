@@ -3,7 +3,7 @@ title: "Task 1:  Deploy a FortiGate NVA"
 weight: 4
 ---
 
-In the following task, you will deploy a FortiGate network virtual appliance (NVA) in your Resource Group.  After deployment, you will login to the FortiGate and verify settings.
+In Task 1, you will deploy a FortiGate network virtual appliance (NVA) in your Resource Group.  After deployment, you will login to the FortiGate and verify settings.
 
 ### FortiGate Deployment - Prerequisite
 
