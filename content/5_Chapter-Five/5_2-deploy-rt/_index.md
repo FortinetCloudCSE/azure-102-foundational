@@ -5,6 +5,8 @@ weight: 4
 
 In Task 2, you will deploy a **Route Table** and modify the **Route Table** by associating both protected subnets to use **port2** of the FortiGate as the default route. These routes are referred to as **User Defined Routes (UDRs)**.
 
+### Create and configure an Azure Route Table
+
 1. ***Navigate*** to your Resource Group
 
 1. ***Click*** "+ Create"
@@ -113,3 +115,26 @@ In Task 2, you will deploy a **Route Table** and modify the **Route Table** by a
 1. ***View*** a summary of the **Routes** and associated **Subnets**
 
     {{< figure src="azure-deploy-route-table-12.png" alt="azure-deploy-route-table-12" >}}
+
+### Remove the Public IP Addresses from the Linux VMs
+
+1. ***Navigate*** to your Resource Group
+
+1. ***Click*** on "linux-a-vm-ip"
+
+1. ***Click*** on "Disassociate"
+
+1. ***Click*** "Yes" to confirm disassociation
+
+1. ***Click*** on "Delete"
+
+1. ***Click*** "Yes" to confirm deletion
+
+    {{< figure src="azure-deploy-route-table-13.png" alt="azure-deploy-route-table-13" >}}
+    {{< figure src="azure-deploy-route-table-14.png" alt="azure-deploy-route-table-14" >}}
+    {{< figure src="azure-deploy-route-table-15.png" alt="azure-deploy-route-table-15" >}}
+    {{< figure src="azure-deploy-route-table-16.png" alt="azure-deploy-route-table-16" >}}
+
+1. ***Repeat*** for "linux-a-vm-ip"
+
+Because the Route Table is directing traffic to the FortiGate using the Public IPs attached to the Linux VMs is not possible because traffic leaving Linux VMs will be forced to the FortiGate and there will be no awareness and the traffic will be dropped.
