@@ -10,7 +10,7 @@ In Task 3, you will confirm the Linux VMs are using the FortiGate NVA as their d
 1. ***From*** **linux-a-vm** console run
 
     - `ping www.yahoo.com`
-    - `ping 192.168.1.164`
+    - `ping 192.168.1.164`  <-- Most likely the Private IP of **linux-b-vm**
 
     Neither should respond
 
@@ -19,7 +19,7 @@ In Task 3, you will confirm the Linux VMs are using the FortiGate NVA as their d
 1. ***From*** **linux-b-vm** console run
 
     - `ping www.yahoo.com`
-    - `ping 192.168.1.132`
+    - `ping 192.168.1.132` <-- Most likely the Private IP of **linux-a-vm**
 
     Neither should respond
 

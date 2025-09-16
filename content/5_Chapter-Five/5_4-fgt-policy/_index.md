@@ -90,7 +90,7 @@ From the FortiGate GUI
     - External IP address/range:  `192.168.1.4`
     - Map to IPv4 address/range:  `192.168.1.164`
     - Port Forwarding:  **Enable**
-    - External service port:  **80**
+    - External service port:  **8080**
     - Map to IPv4 port: **80**
 
     {{< figure src="azure-fgt-policy-5.png" alt="azure-fgt-policy-5" >}}
