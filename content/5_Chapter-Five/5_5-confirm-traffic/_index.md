@@ -29,7 +29,7 @@ In Task 5, you will confirm that the **Firewall Policies** are correct and accom
         - Confirm port 443 access to the Internet and the public IP assigned to **linux-a-vm**
         - Confirm against what the Azure portal has listed as the Public IP assigned to the FortiGate
 
-    1. `ssh azureuser@<public-ip-of-foritgate>`
+    1. `ssh azureuser@<public-ip-of-fortigate>`
         - From your client of choice, SSH from the Internet to the VIP assigned to **linux-a-vm**
         - If you do not have a SSH client installed, use the following website and scan for the [SSH service](https://dnschecker.org/port-scanner.php).
             - Select **Port Type**:  "**Server Ports**"
@@ -52,7 +52,7 @@ In Task 5, you will confirm that the **Firewall Policies** are correct and accom
         - Confirm port 443 access to the Internet and the public IP assigned to **linux-b-vm**
         - Confirm against what the Azure portal has listed as the Public IP assigned to the FortiGate
 
-    1. From your local browser, open a tab and enter `http://x.x.x.x`
+    1. From your local browser, open a tab and enter `http://x.x.x.x:8080`
       - x.x.x.x is the Public IP of the FortiGate
       - Confirm the display of NGINX welcome screen.
 

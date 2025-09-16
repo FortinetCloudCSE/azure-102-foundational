@@ -38,5 +38,3 @@ First log in to the Azure Portal, next access to the lab environment.
 1. Confirm your resource group is shown - **fgtXX-azure102-workshop**
 
     {{< figure src="azure-portal-verify.png" alt="azure-portal-verify" >}}
-
-**Continue to Chapter 4:  Deploy a VNET**

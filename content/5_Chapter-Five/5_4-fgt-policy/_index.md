@@ -136,17 +136,14 @@ From the FortiGate GUI
       - Name: `linux-a-vm access to the internet`
       - NAT: **enabled**
 
-    - PING and SSH access to **linux-b-vm**
-      - Name: `Ping & SSH Access to linux-b-vm`
-
     **linux-b-vm** needs these additional policies
 
     - HTTP service from the **Internet**
       - Name: `Internet access to linux-b-vm`
-      - NAT: **enabled**
 
     - HTTP and HTTPS access to the **Internet**
-      - Name: `linux-a-vm access to the internet`
+      - Name: `linux-b-vm access to the internet`
+      - NAT: **enabled**
 
     - PING access to **linux-a-vm**
       - Name: `Ping Access to linux-a-vm`

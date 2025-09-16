@@ -14,10 +14,10 @@ The Single Fortinet FortiGate requires two interfaces
 
 These interfaces require two additional subnets be added to VNET **acb-server-vnet**
 
-Access **acb-server-vnet** and add these two subnets
+***Access*** **acb-server-vnet** and add these two subnets
 
 - snet-external with address space 192.168.1.0/27
-- snet-internal with address space 192.168.2.32/27
+- snet-internal with address space 192.168.1.32/27
 
 Use these screen shots for reference
 
@@ -26,7 +26,7 @@ Use these screen shots for reference
 
 ### FortiGate Deployment
 
-1. ***Navigate*** to you Resource Group
+1. ***Navigate*** to your Resource Group
 1. ***Click*** "+ Create"
 
     {{< figure src="azure-deploy-fgt-1.png" alt="azure-deploy-fgt-1" >}}
@@ -34,7 +34,7 @@ Use these screen shots for reference
     You will be redirected to the Azure Marketplace.
 
 1. ***Search*** for `Fortinet FortiGate`
-1. ***Select*** "Fortinet FortiGate Next-Generation Firewall" 
+1. ***Select*** "Fortinet FortiGate Next-Generation Firewall"
 1. ***Click*** "Create"
 1. ***Click*** "Single VM"
 
@@ -51,7 +51,7 @@ Use these screen shots for reference
     - FortiGate administrative username:  `azureuser`
     - FortiGate password: `123Password#@!`
     - Confirm password:  `123Password#@!`
-    - FortiGate Name Prefix:  **sgl**
+    - FortiGate Name Prefix:  `sgl`
 
 1. ***Click*** "Next"
 
@@ -136,7 +136,7 @@ Use these screen shots for reference
 
     {{< figure src="azure-deploy-fgt-15.png" alt="azure-deploy-fgt-15" >}}
 
-1. ***Click*** "Save and continue" on the **Automatic Patch Upgrades for v7.4** page
+1. **Select** "Disable automatic patch upgrades" then ***Click*** "Save and continue" on the **Automatic Patch Upgrades for v7.4** page
 
     {{< figure src="azure-deploy-fgt-16.png" alt="azure-deploy-fgt-16" >}}
 
