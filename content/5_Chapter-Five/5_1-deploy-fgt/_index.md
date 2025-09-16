@@ -27,6 +27,7 @@ Use these screen shots for reference
 ### FortiGate Deployment
 
 1. ***Navigate*** to your Resource Group
+
 1. ***Click*** "+ Create"
 
     {{< figure src="azure-deploy-fgt-1.png" alt="azure-deploy-fgt-1" >}}
@@ -35,6 +36,7 @@ Use these screen shots for reference
 
 1. ***Search*** for `Fortinet FortiGate`
 1. ***Select*** "Fortinet FortiGate Next-Generation Firewall"
+
 1. ***Click*** "Create"
 1. ***Click*** "Single VM"
 
