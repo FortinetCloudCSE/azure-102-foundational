@@ -22,5 +22,3 @@ Provision an environment **only** if this session is being run without pre-stage
 {{% notice style="secondary" icon="eye" title="PLEASE DO NOT SUBMIT MULTIPLE TIMES"  %}} After submitting, this page will return with a blank email address box and no other indications.
 
  {{% /notice %}}
-
-**Continue to Chapter 3 - Task 2: Azure Portal - Lab Access**
