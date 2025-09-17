@@ -38,7 +38,7 @@ Now that a **VNET** is configured, Task 2 will cover
 
     {{< figure src="azure-creating-linux-vm-3.png" alt="azure-creating-linux-vm-3" >}}
 
-1. ***Enter*** `Ubuntu 24.02 LTS` in the search field
+1. ***Enter*** `Ubuntu 24.04 LTS` in the search field
 1. ***Click*** "Select"
 1. ***Click*** "Ubuntu Server 24.04 LTS - x64 Gen 1"
 
