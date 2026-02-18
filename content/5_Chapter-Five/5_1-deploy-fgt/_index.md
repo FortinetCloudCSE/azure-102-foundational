@@ -5,7 +5,7 @@ weight: 4
 
 In Task 1, you will deploy a FortiGate network virtual appliance (NVA) in your Resource Group.  After deployment, you will login to the FortiGate and verify settings.
 
-### FortiGate Deployment - Prerequisite
+## FortiGate Deployment - Prerequisite
 
 The Single Fortinet FortiGate requires two interfaces
 
@@ -63,6 +63,7 @@ Use these screen shots for reference
 
     - Fortigate-VM License Type: "Pay As You Go"
     - Fortigate Image Version: "7.4.x" - **Select the latest version**
+    - Size: "F2s_v2" - If the size is not "F2s_v2" use the **"Change size"** link and select "F2s_v2"
 
     {{% notice tip %}}Note the blue shaded areas, they are links to additional information{{% /notice %}}
 

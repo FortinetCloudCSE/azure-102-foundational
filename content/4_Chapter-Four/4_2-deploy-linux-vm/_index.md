@@ -13,7 +13,7 @@ Now that a **VNET** is configured, Task 2 will cover
 **linux-a-vm** will have an interface in subnet **snet-a**
 **linux-b-vm** will have an interface in subnet **snet-b**
 
-#### Steps to create linux-a-vm
+## Steps to create linux-a-vm
 
 1. ***Click*** the Hamburger menu in the upper-left corner of the Azure Portal to show the "Portal Menu"
 1. ***Click*** "Virtual machines"
