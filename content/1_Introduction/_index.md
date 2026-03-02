@@ -16,3 +16,5 @@ During this course the following two architectures will be deployed:
 ### Single VNET with a FortiGate NVA - Secured VNET
 
   {{< figure src="azure-secured-vnet.png" alt="azure-secured-vnet" >}}
+
+  {{< quizframe page="/gamebytag?tag=ch1" height="800" width="100%" >}}

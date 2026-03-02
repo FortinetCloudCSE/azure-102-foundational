@@ -58,4 +58,7 @@ In Task 5, you will confirm that the **Firewall Policies** are correct and accom
 
 If all the tests worked as expected you have successfully deployed workloads in an Azure environment and secured them with Fortinet FortiGate.
 
+  {{< quizframe page="/gamebytag?tag=ch5" height="800" width="100%" >}}
+
 Thank you for attending Azure 102 Foundational - FortiGate
+

@@ -132,3 +132,5 @@ Configure **linux-a-vm** second
 The following diagram is a representation of your current VNET and VM deployment.
 
 {{< figure src="azure-unsecured-vnet.png" alt="azure-unsecured-vnet" >}}
+
+  {{< quizframe page="/gamebytag?tag=ch4" height="800" width="100%" >}}
