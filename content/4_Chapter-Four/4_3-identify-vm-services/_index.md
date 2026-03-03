@@ -101,33 +101,33 @@ Configure **linux-b-vm** first
 
 Configure **linux-a-vm** second
 
-    {{% notice note %}}These commands are completed from the **linux-a-vm**{{% /notice %}}
+{{% notice note %}}These commands are completed from the **linux-a-vm**{{% /notice %}}
 
-    - Use `ping www.yahoo.com`
-      - confirms DNS and ICMP access to the Internet: (CTRL+c to stop ping)
-    - Use `wget www.fortinet.com`
-      - confirms port 80 access to the Internet:  (Confirm "200 OK" response)
-    - Use `curl https://ipinfo.io/ip && echo " linux-a-vm's PIP"`
-      - confirms port 443 access to the Internet
-      - confirms Public IP assigned to **linux-a-vm**: (***Verify*** against what the Azure portal listed in the Overview section for this VM)
+- Use `ping www.yahoo.com`
+  - confirms DNS and ICMP access to the Internet: (CTRL+c to stop ping)
+- Use `wget www.fortinet.com`
+  - confirms port 80 access to the Internet:  (Confirm "200 OK" response)
+- Use `curl https://ipinfo.io/ip && echo " linux-a-vm's PIP"`
+  - confirms port 443 access to the Internet
+  - confirms Public IP assigned to **linux-a-vm**: (***Verify*** against what the Azure portal listed in the Overview section for this VM)
 
-    - ***Check*** for and install Ubuntu updates
-        - `sudo apt update`
-        - `sudo apt -y upgrade`
-        - `clear` after updates have finished
+- ***Check*** for and install Ubuntu updates
+  - `sudo apt update`
+  - `sudo apt -y upgrade`
+  - `clear` after updates have finished
 
-    - ***Ping*** the private IP of **linux-b-vm**
-      - `ping 192.168.1.xxx` (Refer to previous steps for Private IP)
+- ***Ping*** the private IP of **linux-b-vm**
+  - `ping 192.168.1.xxx` (Refer to previous steps for Private IP)
 
-    - ***Install*** **NMAP** Scan open ports on **linux-b-vm**
-      - `sudo apt -y install nmap`
-      - `nmap -F 192.168.1.xxx` (Refer to previous steps for Private IP)
-      - ***Note*** the open port(s) on **linux-a-vm**
+- ***Install*** **NMAP** Scan open ports on **linux-b-vm**
+  - `sudo apt -y install nmap`
+  - `nmap -F 192.168.1.xxx` (Refer to previous steps for Private IP)
+  - ***Note*** the open port(s) on **linux-a-vm**
 
-    - ***Confirm*** SSH access to **linux-b-vm**:
-      - `ssh azureuser@192.168.1.xxx` (Refer to previous steps for Private IP)
-      - Use `sudo ss -ltn` to confirm the same open ports that NMAP reported
-      - Use `exit` to disconnect from **linux-b-vm**
+- ***Confirm*** SSH access to **linux-b-vm**:
+  - `ssh azureuser@192.168.1.xxx` (Refer to previous steps for Private IP)
+  - Use `sudo ss -ltn` to confirm the same open ports that NMAP reported
+  - Use `exit` to disconnect from **linux-b-vm**
 
 The following diagram is a representation of your current VNET and VM deployment.
 

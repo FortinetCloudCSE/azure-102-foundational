@@ -107,7 +107,7 @@ Now that a **VNET** is configured, Task 2 will cover
 
     {{< figure src="azure-creating-linux-vm-14.png" alt="azure-creating-linux-vm-14" >}}
 
-#### Steps to create linux-b-vm
+## Steps to create linux-b-vm
 
 1. Follow the same steps to create the **linux-b-vm**. You will need to alter the following where appropriate:
 
