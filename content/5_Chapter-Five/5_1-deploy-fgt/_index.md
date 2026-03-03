@@ -77,7 +77,7 @@ Use these screen shots for reference
     - External Subnet:  **snet-external**
     - Internal subnet:  **snet-internal**
     - Protected subnet: **snet-a**
-    - Accelerated Networking:  **Enabled**
+    - Accelerated Networking:  **Disabled**
 
     {{% notice note %}}snet-b will be protected as well, the template just does not have a selection for it.{{% /notice %}}
 
