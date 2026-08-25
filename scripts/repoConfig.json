@@ -9,6 +9,7 @@
   "googleServicesID": "G-5RZBH288ST",
   "marketingCode": "kinessor",
   "quizUrl":"https://azure-102-foundational-o32xpkqaca-uc.a.run.app",
+  "provisionApiBaseUrl": "https://func-cse-lab-provisioning.azurewebsites.net",
   "shortcuts": [
     {
       "text": "Azure 102 Presentation",
